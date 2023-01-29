@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Table attributes">
+    <title>Table Attributes</title>
+</head>
+
+<body>
+    <h1>Table Attributes</h1>
+    <h2>Product Table</h2>
+    <table border="1">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Increase Width -->
+    <h2>Table with Width</h2>
+    <table border="1" width="50%">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Table with CellSpacing
+        Add space around (outside) the cell
+    -->
+    <h2>Table with Cell Spacing</h2>
+    <table border="1" cellspacing="10px">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 
+        Table with cellpadding
+        cellpadding add space inside the cell
+     -->
+    <h2>Tabale with CellPadding</h2>
+    <table border="1" cellpadding="10px" width="50%">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 
+        Merge the column => colspan
+     -->
+    <h2>Table with ColSpan</h2>
+    <table border="1" cellpadding="5px" width="50%">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>265000</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 
+        Merge the Row => rowspan
+     -->
+    <h2>Table with RowSpan</h2>
+    <table border="1" cellpadding="5px" width="50%">
+        <tr>
+            <th>S.No.</th>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>TV</td>
+            <td>2</td>
+            <td>50000</td>
+            <td rowspan="4">265000</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Mobile</td>
+            <td>5</td>
+            <td>75000</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Smart Watch</td>
+            <td>5</td>
+            <td>80000</td>
+        </tr>
+    </table>
+</body>
+
+</html>

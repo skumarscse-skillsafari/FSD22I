@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Embed Resources">
+    <title>Embed Resources</title>
+</head>
+
+<body>
+    <h1>Embed Resources</h1>
+    <h2>Embed Image</h2>
+    <!-- 
+        1. Block-level element => h1, p, hr, ul, ol, dl, table
+            Occupies complete width in a browser viewport
+            Contents are arrange one by one (new line)
+        2. In-line element => b, i, u, s, sup, sub, img, audio, video
+            Contents are arranged next to eachother
+     -->
+    <!-- 
+        <img src="" alt="" width="" height="">
+        src => Add path of the image
+        alt => Alternate content. Only visible if image path failed
+      -->
+    <img src="./images/image-one.jpg" alt="image-one" height="250px" width="250px">
+    <img src="./images/image-two.jpg" alt="image-two" height="250px" width="250px">
+    <img src="./images/image-three.jpg" alt="image-three" height="250px" width="250px">
+
+    <hr>
+
+    <h2>Embed Audio</h2>
+    <!-- 
+        <audio controls autoplay>
+            <source src="" type="">
+        </audio>
+        controls => Add audio controllers - Play, Pause, Volume
+        autoplay (optional) => Audio starts play automatically whenever the page loads
+        src => path of the audio
+        type => define the type of the audio embeded
+     -->
+    <audio controls>
+        <source src="./audios/shape-of-you.mp3" type="audio/mp3">
+    </audio>
+
+    <hr>
+
+    <h2>Embed Video</h2>
+    <!-- 
+        <video controls autoplay height width>
+            <source src="" type="">
+        </video>
+        controls => add video controllers - Play, Pause, Seek slider, volume
+        autoplay (optional) => autoplay the video whenever the page loads
+        height and width (optional) => increase/decrease height and width of the video player
+        src => add path of the video
+        type => define the video type
+     -->
+    <video controls width="250px">
+        <source src="./videos/videoplayback.mp4" type="video/mp4">
+    </video>
+
+</body>
+
+</html>
