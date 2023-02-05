@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="HTML Form">
+    <title>HTML - Form</title>
+</head>
+
+<body>
+    <!-- 
+        Form => Get response or information from the user
+        1. Single line response => name, email, age, phone number
+            input => type => text, email, number, tel
+        2. Multi line response => address
+            textarea 
+        3. Single response by giving multiple options
+            input => type => radio
+            select => single
+        4. Multiple response by giving multiple options
+            input => type => checkbox
+            select => multiple
+     -->
+    <h1>HTML Form</h1>
+    <h2>Registration Form</h2>
+    <!-- 
+        Firstname, Lastname, password, confirm password, age, email, phonenumber, gender, address, courses
+        hobbies
+        <form action="" method="GET/POST">
+
+        </form>
+     -->
+    <form action="./result.html" method="POST">
+        <fieldset>
+            <legend>Basic User Information:</legend>
+            <table>
+                <tr>
+                    <td><label for="firstname">First Name:</label></td>
+                    <td><input type="text" name="firstname" id="firstname" placeholder="Enter your firstname" required
+                            autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Last Name:</label></td>
+                    <td><input type="text" name="lastname" id="lastname" placeholder="Enter your lastname"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="off
+                        "></td>
+                </tr>
+                <tr>
+                    <td><label for="DOB">DOB:</label></td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" name="age" id="age" placeholder="Enter your age"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" name="password" id="password" placeholder="Enter password"></td>
+                </tr>
+                <tr>
+                    <td><label for="confirmPassword">Confirm Password:</label></td>
+                    <td><input type="password" name="confirmPassword" id="confirmPassword"
+                            placeholder="Enter password once again"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea name="address" id="address" cols="25" rows="3"></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>User Choices</legend>
+            <table>
+                <tr><label for="gender">Gender:</label></tr>
+                <tr><input type="radio" name="gender" id="male">Male
+                    <input type="radio" name="gender" id="female">Female
+                    <input type="radio" name="gender" id="notPrefer">Not prefer to say
+                </tr>
+                <tr>
+                    <td><label for="courses">Courses:</label></td>
+                    <td>
+                        <input type="checkbox" name="english" id="english">English
+                        <input type="checkbox" name="maths" id="maths">Maths
+                        <input type="checkbox" name="physics" id="physics">Physics
+                        <input type="checkbox" name="chemistry" id="chemistry">Chemistry
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies (single):</td>
+                    <td>
+                        <select name="hobbies" id="hobbies">
+                            <option value="cricket">Cricket</option>
+                            <option value="football">Football</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="newpaper">Newspaper</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies (multiple):</td>
+                    <td>
+                        <select name="hobbies" id="hobbies" multiple>
+                            <option value="cricket">Cricket</option>
+                            <option value="football">Football</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="newpaper">Newspaper</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="upload">Upload Marksheet:</label></td>
+                    <td><input type="file" name="upload" id="upload"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Button Group</legend>
+            <table>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
