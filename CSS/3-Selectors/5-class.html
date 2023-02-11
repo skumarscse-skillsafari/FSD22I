@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Selectors - Class">
+    <title>CSS - Selectors - Class</title>
+    <style>
+        /* 
+            Selectors:
+            1. Class Selector
+            // Attribute => class = "value", Group the set of elements
+            // More than one element can have same class name
+
+            .classValue {
+                properties;
+            }
+        */
+        .nav-items {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .special {
+            background-color: red;
+        }
+
+        .div-one,
+        .div-two {
+            color: dodgerblue;
+        }
+
+        /* Specificity */
+        p.special {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Selectors - Class</h1>
+    <p class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum magni dolor nisi itaque quam
+        exercitationem,
+        inventore vitae totam. Neque, pariatur.</p>
+    <ul id="navbar">
+        <li class="nav-items">Home</li>
+        <li class="nav-items">About</li>
+        <li class="special nav-items">Projects</li>
+        <li class="nav-items">Contact</li>
+    </ul>
+    <div>
+        <div class="div-one">
+            <h2>Heading - 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, magni?</p>
+            <ol>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Mango</li>
+            </ol>
+        </div>
+        <div class="div-two">
+            <h3>Heading - 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laborum!</p>
+        </div>
+    </div>
+</body>
+
+</html>

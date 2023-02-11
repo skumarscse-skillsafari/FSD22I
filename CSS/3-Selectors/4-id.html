@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Selectors - ID">
+    <title>CSS - Selectors - ID</title>
+    <style>
+        /* 
+            Selectors:
+            1. ID Selector
+            1. Attribute => id = "value"
+            Value of "id" must be unique. Same value of the id, must not be repeated
+            Uniquly identify the specific element in a html page
+            #idValue {
+                properties;
+            }
+
+            #head {
+                color: red;
+            }
+
+            #nav {
+                color: green;
+            }
+        */
+        #head {
+            color: red;
+        }
+
+        #nav {
+            color: blue;
+        }
+
+        #head,
+        #nav {
+            text-decoration: underline;
+        }
+
+        /* Specificity */
+        h1#nav {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="head">CSS - Selectors - ID</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum magni dolor nisi itaque quam exercitationem,
+        inventore vitae totam. Neque, pariatur.</p>
+    <h1 id="nav">Navbar</h1>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+    </ul>
+    <div>
+        <h2>Heading - 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, magni?</p>
+        <h2>Fruits</h2>
+        <ol>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+        </ol>
+        <div>
+            <h3>Heading - 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laborum!</p>
+        </div>
+    </div>
+</body>
+
+</html>
