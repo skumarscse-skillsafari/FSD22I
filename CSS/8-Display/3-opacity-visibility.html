@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Opacity and Visibility">
+    <title>CSS - Opacity and Visibility</title>
+    <style>
+        /* 
+            Opacity and Visibility
+            opacity => increase/decrease the transparency of the element (0.0-0.99 or 0-1)
+            opacity => show/hide (not remove)
+
+            visibility => show/hide (not remove)
+
+            display: none => removing the element from the dom tree
+        */
+        div {
+            background: #0dc71fa4;
+            margin: 10px;
+            height: 50px;
+        }
+
+        .none {
+            /* display: block */
+            display: none;
+            /* display: block; */
+            /* hide and remove the element */
+        }
+
+        .opacity-1 {
+            opacity: 1;
+        }
+
+        .opacity-5 {
+            opacity: 0.5;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .visibility {
+            /* visibility: visible; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="none"></div>
+    <div class="opacity-1"></div>
+    <div class="opacity-5"></div>
+    <div class="opacity-0"></div>
+    <div class="visibility"></div>
+</body>
+
+</html>

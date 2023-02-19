@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Min and Max">
+    <title>CSS - Min and Max</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* height => auto */
+
+        .navbar {
+            height: 6rem;
+            background: burlywood;
+        }
+
+        .one {
+            background: coral;
+            min-height: calc(100vh - 6rem);
+            /* min-height => applies the fixed height till it reaches some threshold point */
+            max-height: 90vh;
+            /* max-height =>  applies max-height (fixed) to the element, after that it will not expand*/
+            /* overflow: hidden; */
+            /* overflow: scroll;
+            overflow: auto; */
+            /* overflow: visible; */
+        }
+
+        .two {
+            background: crimson;
+            width: 10rem;
+            height: 25rem;
+            overflow: hidden;
+            overflow: scroll;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar"></div>
+    <div class="one">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt dolore ea neque laborum? Sunt quis
+            perferendis dolore exercitationem esse, ipsum consequatur, facere blanditiis fugit beatae ipsam voluptates
+            numquam vitae eaque reiciendis omnis itaque nihil nam eum cum laborum. Libero eligendi officiis quisquam
+            error sit! Doloremque ea et vero minus tenetur blanditiis nulla voluptas magni perferendis rerum optio ut,
+            quis a, minima esse ipsa laborum amet ducimus repellat itaque. Illo assumenda architecto sunt accusamus quod
+            suscipit perferendis saepe minus, enim odio sit similique, commodi illum maxime incidunt eaque nostrum,
+            exercitationem repellat est consequatur iusto tenetur molestias reiciendis totam? Velit architecto impedit
+            provident obcaecati! Aut inventore, quae, praesentium suscipit numquam dignissimos laboriosam eos fugit
+            deleniti in ab optio natus eius laborum modi! Amet fugit obcaecati deleniti tempora ex error sequi rerum
+            dicta animi mollitia sit, veritatis reprehenderit facilis illo corporis possimus voluptatem culpa. Delectus
+            sit placeat perspiciatis voluptatem unde soluta, quaerat temporibus omnis veniam quis, quidem pariatur enim.
+            Eligendi, tempora nulla similique commodi placeat odit a ex non accusamus rem fugiat, officia rerum
+            explicabo, ipsum iste recusandae voluptatem at illum vel quaerat eos sunt. Placeat eius molestiae, delectus
+            adipisci facilis cum deserunt voluptate, cumque officia quasi quaerat? Itaque repellat voluptate quaerat?
+        </p>
+    </div>
+    <div class="two">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptate necessitatibus dolores obcaecati!
+            Eos ad blanditiis reiciendis nihil voluptatem consectetur quidem illum quasi. Rem explicabo dignissimos,
+            minima doloribus quo repudiandae natus. Eligendi officiis similique nemo. Et optio aut quibusdam alias eius
+            veritatis sequi est inventore quidem minima quo, neque dolorum tenetur tempore praesentium obcaecati laborum
+            sint nisi placeat perspiciatis atque! Assumenda quae cum quibusdam ducimus dolores doloribus mollitia iusto
+            rerum, voluptatibus ipsam impedit suscipit aliquam sapiente similique, illum rem? Vitae odio ab id
+            exercitationem maxime eius dolores repellendus impedit accusamus, consequatur odit debitis explicabo enim,
+            maiores quaerat aut nostrum provident illum ullam modi? Labore asperiores quod quae tempora libero? Et ipsa
+            nostrum praesentium itaque ratione enim consequuntur, neque unde corrupti sit quia maiores, blanditiis
+            deleniti fugiat omnis alias harum sint assumenda molestias earum ipsam nam tempora? Tempora placeat
+            doloribus debitis mollitia nam quam quo, accusantium animi possimus, reiciendis at in laboriosam. Dolores
+            adipisci totam culpa, iure nesciunt illum quis alias corporis minima repellat quam harum facilis rerum modi
+            animi molestias unde blanditiis? Explicabo non possimus cum praesentium quos excepturi adipisci saepe
+            accusantium fuga nulla mollitia perspiciatis at recusandae ipsa, quasi maxime, optio repellendus! Animi, in
+            quis cupiditate enim numquam odit.</p>
+    </div>
+</body>
+
+</html>

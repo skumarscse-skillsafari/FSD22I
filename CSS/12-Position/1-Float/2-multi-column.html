@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Float - Multi - column Layout">
+    <title>CSS - Float - Multi - column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 4rem;
+            background: green;
+        }
+
+        #content {
+            background: coral;
+            min-height: calc(100vh - 4rem);
+        }
+
+        footer {
+            background: gray;
+            height: 4rem;
+        }
+
+        section {
+            margin-left: 5px;
+            padding: 20px;
+            line-height: 2rem;
+            font-size: 22px;
+        }
+
+        #about {
+            float: left;
+            width: 30%;
+            border: 2px solid red;
+        }
+
+        #projects {
+            float: left;
+            width: 30%;
+            border: 2px solid red;
+        }
+
+        #contact {
+            float: left;
+            width: 30%;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="about">
+            <h2>About Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit omnis exercitationem accusantium atque
+                eum culpa adipisci, earum, voluptatem dolor, debitis sed reprehenderit sunt animi veritatis ipsa quas
+                perferendis necessitatibus corrupti itaque pariatur nesciunt. Id voluptates et deleniti voluptate aut
+                obcaecati at, fugit accusamus voluptatibus eum omnis aliquid facilis unde perspiciatis?</p>
+        </section>
+        <section id="projects">
+            <h2>Projects Section</h2>
+            <ul>
+                <li>To-Do app</li>
+                <li>Expense Tracker</li>
+                <li>Task Manager</li>
+                <li>E-commerce app</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nemo ut quisquam expedita est, dolorum esse
+                enim, facilis alias dolorem similique quis hic vel commodi?</p>
+        </section>
+        <section id="contact">
+            <p>Feel free to contact us</p>
+            <form action="#" method="post">
+                <p>
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter your name">
+                </p>
+                <p>
+                    <input type="email" name="email" id="email" placeholder="Enter email">
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2023, SkillSafai. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

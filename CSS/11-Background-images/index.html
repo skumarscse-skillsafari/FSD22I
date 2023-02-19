@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Background images">
+    <title>Background images</title>
+    <style>
+        /* 
+            background: url("image-path")
+        */
+        div {
+            height: 300px;
+            border: 2px solid green;
+        }
+
+        .one {
+            background: url("./images/image-one.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .two {
+            /* background: url("./images/image-two.jpg");
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: space;
+            background-repeat: round;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position: 50% 10%;
+            background-position: center;
+            background-attachment: fixed; */
+
+            /* 
+            short-hand 
+            background: background_url() position/size repeat attachment
+            */
+            background: url("./images/image-two.jpg") center/auto no-repeat fixed;
+        }
+
+        .three {
+            background: url("./images/image-three.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+
+</html>
