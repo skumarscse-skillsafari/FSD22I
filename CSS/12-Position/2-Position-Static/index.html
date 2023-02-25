@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Position - Static">
+    <title>Position Static</title>
+    <style>
+        /* 
+            Position: static
+            // Default value for all the elements. Elements are usually positioned in the fix place based on the element property.
+            // Block => Position => one by one
+            // Inline => Position => next to eachother
+        */
+        div {
+            border: 2px solid red;
+            background: yellow;
+            margin-top: 40px;
+            text-align: right;
+        }
+
+        .one {
+            background: blue;
+            color: white;
+            text-align: left;
+            position: static;
+        }
+
+        .two {
+            background: green;
+            color: white;
+            position: static;
+        }
+
+        .span {
+            background: pink;
+            font-size: 20px;
+            color: #222;
+            position: static;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque fugit numquam ipsam placeat
+            tenetur repellat. Debitis eligendi possimus nisi! Aperiam distinctio unde neque facere cumque.</p>
+        <p class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in obcaecati earum consectetur
+            velit vel, dolore accusamus soluta aut doloremque iure deserunt natus error amet.</p>
+        <span class="span">I am from span tag.</span>
+        <span class="span">I am from span tag.</span>
+    </div>
+</body>
+
+</html>

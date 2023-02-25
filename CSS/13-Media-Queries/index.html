@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Media Queries">
+    <title>CSS - Media Queries</title>
+    <style>
+        /* 
+            // Media Queries => Make the website responsive
+            // min-width - starting from
+            // max-width - up to
+            // Syntax
+            @media screen and (min-width/max-width: value) {
+
+            }
+        */
+        /* Tablet => outer css */
+        .head {
+            background: green;
+            padding: 20px;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        li {
+            background: cornflowerblue;
+            margin: 5px;
+            padding: 20px 60px;
+            font-size: 24px;
+            color: white;
+            display: inline-block;
+        }
+
+        /* Mobile  => outer css + media query css */
+        @media screen and (max-width: 400px) {
+            .head {
+                text-decoration: underline;
+                text-transform: uppercase;
+                background: red;
+            }
+
+            li {
+                width: 225px;
+            }
+        }
+
+        /* Desktop => outer css + media query */
+        @media screen and (min-width: 600px) {
+            li {
+                background: cyan;
+                color: white;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="head">Heading</h1>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+    </ul>
+</body>
+
+</html>
