@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Desccription" content="Z-Index">
+    <title>Z-Index</title>
+    <style>
+        /* 
+            // Z-Index
+            // Stack the html elements/ align the html elements
+            // z-index: 0; (default) (positive or negative value)
+            // Higher the index value, elements stacked on the top
+            // Lower the index value, elements stacked at the bottom
+            // Works only in position: relative; and position: absolute; Not works on static
+        */
+        .banner {
+            margin: 20px;
+            width: 80vw;
+            height: 70vh;
+            border: 5px solid green;
+            position: relative;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+        }
+
+        .one {
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .two {
+            top: 10%;
+            left: 10%;
+            z-index: -1;
+        }
+
+        .three {
+            top: 20%;
+            left: 20%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="./images/image-one.jpg" alt="image-one" class="one">
+        <img src="./images/image-two.jpg" alt="image-two" class="two">
+        <img src="./images/image-three.jpg" alt="image-three" class="three">
+    </div>
+</body>
+
+</html>
