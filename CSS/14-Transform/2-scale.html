@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Transform - Scale">
+    <title>CSS - Transform - Scale</title>
+    <style>
+        /* 
+        transform: scale()
+        */
+        div {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        .one {
+            margin: 0 auto;
+            background: green;
+            /* transform: scale(2); */
+            /* zoom-in => 200% in both x-axis and y-axis */
+            transform: scaleX(1.5);
+        }
+
+        .two {
+            background: red;
+            /* transform: scaleY(1.5); */
+
+
+        }
+
+        .two:hover {
+            transform: scale(0.5, 1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>

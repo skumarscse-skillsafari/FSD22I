@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Transform - Skew">
+    <title>CSS - Transform - Skew</title>
+    <style>
+        /* 
+        CSS - Transform - Skew
+        */
+        div {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        .one {
+            background: green;
+            transform: skewX(30deg);
+        }
+
+        .two {
+            background: red;
+            transform: skewY(30deg);
+            transform: skew(30deg, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>
