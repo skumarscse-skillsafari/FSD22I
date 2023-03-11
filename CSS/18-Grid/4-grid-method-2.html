@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Grid - Method - 2">
+    <title>Grid - Method - 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            border: 2px solid red;
+            min-height: 100vh;
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "header header header header"
+                "header header header header"
+                "aside-left section-1 section-1 aside-right"
+                "aside-left section-1 section-1 aside-right"
+                "aside-left section-2 section-2 aside-right"
+                "aside-left section-2 section-2 aside-right"
+                "aside-left section-3 section-3 aside-right"
+                "aside-left section-3 section-3 aside-right"
+                "footer footer footer footer"
+                "footer footer footer footer";
+        }
+
+        .header,
+        .aside-left,
+        .aside-right,
+        .section-1,
+        .section-2,
+        .section-3,
+        .footer {
+            border: 2px solid black;
+            padding: 40px;
+            font-size: 24px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .header {
+            background: coral;
+            grid-area: header;
+        }
+
+        .aside-left {
+            background: cornflowerblue;
+            grid-area: aside-left;
+        }
+
+        .aside-right {
+            background: cornflowerblue;
+            grid-area: aside-right;
+        }
+
+        .section-1 {
+            background: chocolate;
+            grid-area: section-1;
+        }
+
+        .section-2 {
+            background: cadetblue;
+            grid-area: section-2;
+        }
+
+        .section-3 {
+            background: crimson;
+            grid-area: section-3;
+        }
+
+        .footer {
+            background: darkviolet;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">Header</div>
+        <div class="aside-left">Aside Left</div>
+        <div class="aside-right">Aside Right</div>
+        <div class="section-1">Section - 1</div>
+        <div class="section-2">Section - 2</div>
+        <div class="section-3">Section - 3</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
