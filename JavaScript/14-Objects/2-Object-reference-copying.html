@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Object reference and Object Copying">
+    <title>Object reference and Object Copying</title>
+</head>
+
+<body>
+    <h1>Object reference and Object Copying</h1>
+
+
+    <script>
+        // Object reference and Object Copying
+        // Primitive
+        // let firstName = "John";
+        // let lastName = firstName;
+        // console.log(firstName);
+        // console.log(lastName);
+        // lastName = "Robert";
+        // console.log(firstName); // John
+        // console.log(lastName); // Robert
+
+        // let objOne = {
+        //     name: "John"
+        // }
+        // let objTwo = objOne;
+        // console.log(objOne);
+        // console.log(objTwo);
+        // objTwo.age = 30;
+        // console.log(objOne);
+        // console.log(objTwo);
+        // objOne.isAdmin = true;
+        // console.log(objOne);
+        // console.log(objTwo);
+
+        // console.log(objOne == objTwo); // true
+        // console.log(objOne === objTwo); // true
+
+        // let a = {};
+        // let b = {};
+        // console.log(a == b);
+        // console.log(a === b);
+
+        // Object.assign() => Copy, Clone, merge
+
+        // Syntax
+        // Object.assign(destination, source-1, source-2,..., source-N);
+        // let objOne = {
+        //     name: "John",
+        //     age: 25,
+        //     isAdmin: true
+        // }
+        // let objTwo = {};
+        // console.log(objOne);
+        // console.log(objTwo);
+        // for (let key in objOne) {
+        //     objTwo[key] = objOne[key]; // objTwo["name"] = "John"
+        // }
+        // console.log(objOne);
+        // console.log(objTwo);
+        // console.log(objOne === objTwo);
+        // objOne.city = "Chennai";
+        // objTwo.state = "Delhi";
+        // console.log(objOne);
+        // console.log(objTwo);
+
+        // Nested properties in object
+        // let userDetails = {
+        //     name: {
+        //         firstName: "John",
+        //         lastName: "Jack"
+        //     },
+        //     age: 30,
+        //     city: "Chennai"
+        // }
+        // console.log(userDetails.name);
+        // console.log(userDetails.name.firstName);
+        // console.log(userDetails.name.lastName);
+
+        // let objOne = {
+        //     name: "John",
+        //     age: 25,
+        //     isAdmin: true
+        // };
+        // let objTwo = {};
+        // console.log(objOne);
+        // console.log(objTwo);
+        // Object.assign(objTwo, objOne);
+        // console.log(objOne);
+        // console.log(objTwo);
+        // objOne.city = "Chennai";
+        // objTwo.state = "Delhi";
+        // console.log(objOne);
+        // console.log(objTwo);
+
+        // Merging
+        // let objOne = { name: "Jack" };
+        // let objTwo = { age: 25 };
+        // let objThree = { isAdmin: true };
+        // let newObj = { city: "Chennai" };
+        // Object.assign(newObj, objOne, objTwo, objThree, { department: "Testing", company: "SkillSafari" });
+        // console.log(newObj);
+
+        // let objOne = { name: "Jack" };
+        // let objTwo = { age: 25 };
+        // let objThree = { isAdmin: true, name: "John" };
+        // let newObj = { city: "Chennai" };
+        // Object.assign(newObj, objTwo, objThree, objOne);
+        // console.log(newObj);
+
+        let userDetails = {
+            name: {
+                firstName: "John",
+                lastName: "Jack",
+            },
+            age: 25
+        }
+        let newUser = {};
+        Object.assign(newUser, userDetails);
+        console.log(userDetails);
+        console.log(newUser);
+        newUser.city = "Chennai";
+        console.log(userDetails);
+        console.log(newUser);
+
+    </script>
+</body>
+
+</html>

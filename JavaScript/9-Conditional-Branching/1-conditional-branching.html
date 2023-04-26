@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Conditional branching">
+    <title>Conditional branching</title>
+</head>
+
+<body>
+    <h1>Conditional branching</h1>
+
+    <script>
+        // Conditional branching
+        // 1. "if" statement
+        // 2. "else" clause
+        // 3. multiple "if" statements
+        // 4. conditional operator
+
+        // block
+        // { => starting of the block
+        // block statements
+        // } => rnd of the block
+
+        // if (3 < 2) {
+        //     console.log(1)
+        //     console.log(2)
+        //     console.log(3)
+        //     console.log(4)
+        //     console.log(5)
+        // }
+        // {
+        //     console.log(6)
+        //     console.log(7)
+        //     console.log(8)
+        //     console.log(9)
+        //     console.log(10)
+        // }
+
+        // "if" statement
+        // Syntax
+        /*
+            if(condition == true) {
+                // if block
+            }
+        */
+        // console.log("Before if statement");
+        // let numOne = +prompt("Enter a number");
+        // let numTwo = +prompt("Enter another number");
+        // if (numOne < numTwo) {
+        //     console.log(`The value in numOne: ${numOne}`);
+        //     console.log(`The value in numTwo: ${numTwo}`);
+        //     console.log("The numOne is lessthan numTwo");
+        // }
+        // console.log("After the if statement");
+
+        // "else" clause
+        // only comes with "if" statement
+        // "else" clause cannot be used without "if" statement
+        // But "if" statement can be used without "else" clause
+
+        // Syntax
+        /*
+            if (condition) {
+                // executed only if condition of "if" statement turns true
+                // if block
+            } else {
+                // executed only the condition of "if" statement turns false
+                // else block
+            }
+        */
+        // let numOne = +prompt("Enter a number");
+        // let numTwo = +prompt("Enter another number");
+        // if (numOne < numTwo) {
+        //     console.log(`The value in numOne: ${numOne}`);
+        //     console.log(`The value in numTwo: ${numTwo}`);
+        //     console.log("------------------------------------");
+        //     console.log("The numOne is lessthan numTwo");
+        //     console.log("------------------------------------");
+        // } else {
+        //     console.log(`The value in numOne: ${numOne}`);
+        //     console.log(`The value in numTwo: ${numTwo}`);
+        //     console.log("-------------------------------------");
+        //     console.log("The numOne is greaterthan numTwo");
+        //     console.log("--------------------------------------");
+        // }
+
+        // Logic => Check and return the result, the given number is ODD or EVEN
+        // 12 => EVEN
+        // 7 => ODD
+        // num % 2 == 0 => EVEN
+        // 12 % 2 == 0 => EVEN
+        // 20 % 2 == 0 => EVEN
+
+        // 13 % 2 => 1 != 0 => ODD
+        // 15 % 2 => 1 != 0 => ODD
+        // let num = prompt("Enter a value");
+        // if (num % 2 != 0) {
+        //     console.log(`The number ${num} is ODD`);
+        // } else {
+        //     console.log(`The number ${num} is EVEN`);
+        // }
+
+        // let num = prompt("Enter a value"); // 21
+        // if (num % 2) { // 21 % 2 => 1
+        //     console.log(`The number ${num} is ODD`);
+        // } else {
+        //     console.log(`The number ${num} is EVEN`);
+        // }
+
+        // multiple if()
+        // check for multiple conditions
+        // Syntax
+        /*
+            if (condition-1) { // false
+                // if block
+            } else if (condition-2) { // true
+                // else if block
+            } else if (condition-3) { // false
+                // else if block
+            } else {
+                // else block
+            }
+        */
+
+        // Application for donating "blood"
+        // age >= 18
+        // weight >= 60
+        // healthHistory => "yes"
+        // bloodGroup => "yes"
+        // let name = prompt("Enter donor name");
+        // let age = +prompt("Enter donor age");
+        // let weight = +prompt("Enter donor weight");
+        // let healthHistory = prompt("Do donor prone to any disease?");
+        // let bloodGroup = prompt("Donor bloodgroup is same?");
+        // console.log("-------------- DONOR DETAILS --------------");
+        // console.log(`Donar name: ${name}`);
+        // console.log(`Donar Age: ${age}`);
+        // console.log(`Donar weight: ${weight}`);
+        // console.log(`Donar healthHistory: ${healthHistory}`);
+        // console.log(`Donar bloodGroup: ${bloodGroup}`);
+        // console.log("----------------- RESULT ---------------");
+
+        // if (age < 18) {
+        //     console.log("Donor is not eligible to donate blood");
+        // } else if (weight < 60) {
+        //     console.log("Donor is not eligible to donate blood");
+        // } else if (healthHistory === "yes") {
+        //     console.log("Donor is not eligible to donate blood");
+        // } else if (bloodGroup === "no") {
+        //     console.log("Donor is not eligible to donate blood");
+        // } else {
+        //     console.log("Donor is eligible to donate blood");
+        // }
+        // console.log("-------------------------------------------");
+
+        // Conditional Operator
+        // Short-hand way of writing if-else
+        // Syntax
+        // condition ? ""true statement : "false statement"
+
+        if (20 > 50) {
+            console.log("Number one is Greater");
+        } else {
+            console.log("Number two is Greater");
+        }
+
+        if (20 > 50) console.log("Number one is Greater");
+        else console.log("Number two is Greater");
+
+
+        // (20 > 50) ? console.log("Number one is Greater") : console.log("Number two is Greater");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Datatypes">
+    <title>Datatypes</title>
+</head>
+
+<body>
+    <h1>Datatypes</h1>
+
+
+    <script>
+        // Datatypes
+        // 1. Number
+        // 2. BigInt
+        // 3. String
+        // 4. Boolean
+        // 5. null
+        // 6. undefined
+        // 7. Objects
+        // 8. Symbols
+
+        // Primitive datatype
+        // Number, BigInt, String, Boolean, null, undefined, symbols
+        // Can able to store only the limited amount of data
+
+        // Non-primitive datatype
+        // Objects, Arrays and Functions
+        // Size of the data can be more and more than one value can assign to a variable
+
+        // Datatypes => Used to tell the JavaScript interpreter what is the type of the value
+        // we are assigned to the variable
+        // let firstName = "John"; // String
+        // let age = 20; // Number
+
+        // let name = "John";
+        // console.log(name); // John
+        // typeof => check the data type
+        // console.log(typeof name); // string
+
+        // name = 25;
+        // console.log(name); // 25
+        // console.log(typeof name); // number
+
+        // JavaScript is a dynamically typed programming language
+        // Depends upon the data/value assigned to the variable, the datatype of the variable
+        // will change automatically
+
+        // Java and JavaScript
+        // Java => Create desktop, mobile and web applications
+        //      => Object-oriented programming language (Object and Class)
+        // JavaScript => Create only the web application
+        //            => Object-Oriented, Functional Programming, Procedural Programming
+
+
+        // Number
+        // Addition, Subtraction, Multiplication, Division, Remainder
+        // whole numbers, decimal numbers, infinity, negative infinity, NaN (Not a Number)
+        // 1, 2, 12, 50
+        // 12.5, 34.6, 78.2
+
+        // let age = 25;
+        // let percentage = 87.3;
+        // console.log(age);
+        // console.log(typeof age);
+        // console.log(percentage);
+        // console.log(typeof percentage);
+
+        // console.log(1 / 0); // infinity
+        // console.log(-(1 / 0)); // negative infinity
+        // console.log("hello" / 25); // NaN
+
+        // BigInt
+        // -2^53-1 to 2^53-1
+        // We can store the large numbers
+        // We can store the large numbers with exact precision
+        // All the numbers must ends with "n"
+        // let countDown = 1234567891234567891234567891234456789n;
+        // console.log(countDown);
+        // console.log(typeof countDown);
+
+        // String
+        // Group of alphabetical characters or Group of alpha numeric characters
+        // 1. Double quote ("Hello")
+        // 2. Single quote ('Hello')
+        // 3. Backticks (`Hello`)
+
+        // Double quote
+        // let exampleOne = "This is a string in double quote";
+        // console.log(exampleOne);
+        // console.log(typeof exampleOne);
+
+        // // Single quote
+        // let exampleTwo = 'This is a string in single quote';
+        // console.log(exampleTwo);
+        // console.log(typeof exampleTwo);
+
+        // // Double quote Vs Single quote
+        // let exampleThree = 'This is a string in "double" quote';
+        // console.log(exampleThree);
+        // console.log(typeof exampleThree);
+
+        // let exampleFour = "This is a string in 'single' quote";
+        // console.log(exampleFour);
+        // console.log(typeof exampleFour);
+
+        // Backtick
+        // ${any statements}
+        // let example = `This is a string with 'backticks'`;
+        // console.log(example);
+        // console.log(typeof example);
+
+        // let exampleOne = `The product of 5 and 10 is: ${5 * 10}`;
+        // console.log(exampleOne);
+
+        // let name = "John";
+        // let age = 30;
+        // console.log(`Name: ${name} and Age: ${age}`);
+        // console.log(
+        //     `Hello.
+        //      How are you?
+        //      I'm ${age} years old.`);
+
+        // // Single / and Double quote
+        // console.log("Name: " + name + " and Age: " + age);
+
+
+        // Boolean
+        // true and false
+        // 1 and 0
+        // yes and no
+        // on and off
+
+        // let isAdmin = true;
+        // let isEligible = false;
+        // console.log(isAdmin);
+        // console.log(typeof isAdmin);
+        // console.log(isEligible);
+        // console.log(typeof isEligible);
+        // let exampleOne = 5 > 20;
+        // console.log(exampleOne);
+
+        // null (not a type of datatype but its exists in JS)
+        // we can use "null" as value to the variable, if the value is unknown
+        // let name = null;
+        // console.log(name);
+        // console.log(typeof name); // object
+
+        // undefined (not a type of datatype but exists in JS)
+        // if the value is not assigned/defined to the variable
+        let name;
+        console.log(name);
+        console.log(typeof name);
+
+
+
+    </script>
+</body>
+
+</html>

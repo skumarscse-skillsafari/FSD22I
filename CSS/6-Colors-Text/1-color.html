@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Colors">
+    <title>CSS - Colors</title>
+    <style>
+        /* 
+        CSS - Colors
+        1. name 
+        2. hex-color code
+        3. rgb()
+        4. rgba()
+        5. hsl() / hsla()
+        6. linear-gradient
+        7. radial-gradient
+        */
+        div {
+            height: 150px;
+            width: 150px;
+        }
+
+        .color-name {
+            background-color: green;
+        }
+
+        .color-hex {
+            background-color: #22c1c3;
+        }
+
+        .color-rgb {
+            background-color: rgb(204, 12, 228);
+        }
+
+        .color-rgba {
+            background-color: rgba(242, 168, 8, 66);
+        }
+
+        .color-hsl {
+            background-color: hsl(84, 59%, 58%);
+        }
+
+        .color-linear-gradient {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .color-radial-gradient {
+            background: rgb(63, 94, 251);
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(154, 82, 182, 1) 44%, rgba(252, 70, 107, 1) 78%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Colors</h1>
+    <div class="color-name"></div>
+    <br>
+    <div class="color-hex"></div>
+    <br>
+    <div class="color-rgb"></div>
+    <br>
+    <div class="color-rgba"></div>
+    <br>
+    <div class="color-hsl"></div>
+    <br>
+    <div class="color-linear-gradient"></div>
+    <br>
+    <div class="color-radial-gradient"></div>
+</body>
+
+</html>

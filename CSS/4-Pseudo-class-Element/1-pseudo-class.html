@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Pseudo - Class">
+    <title>CSS - Pseudo-Class</title>
+    <style>
+        /* 
+        Pseudo-class
+        1. Pre-defined classes can be applied to the element without applying explicitly
+        1. link
+        2. visited
+        3. hover
+        4. active
+
+        selector:pseudoClassName {
+            properties;
+        }
+        */
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            text-transform: uppercase;
+        }
+
+        a:active {
+            color: crimson;
+            font-size: 33px;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Pseudo-Class</h1>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Transform - Translate">
+    <title>CSS - Transform - Translate</title>
+    <style>
+        /* 
+        CSS - Transform - Translate
+        transform: translate(value); => move the html element in both the x-axis and y-axis
+        // horizontally and vertically
+
+        */
+        div {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 5px;
+        }
+
+        .one {
+            background: green;
+            /* transform: translateX(60px); */
+            /* transform: translateY(40px); */
+            transform: translate(60px, 40px);
+        }
+
+        .two {
+            background: red;
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Functions">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+
+    <script>
+        // Functions
+        // Building blocks of the programs => Call a set of codes many times without repeitation
+        // input => process the input => output
+        // ATM
+        // input => insert ATM card
+        // machine => process => access your account => deduct the amount you entered in the machine
+        // output => cash
+
+        // 1. Function Declaration => giving name, providing the logics, getting the input
+        // 2. Function Calling => call the function using function name, provide value to the input
+
+        // Syntax
+        // Function Declaration
+        /*
+            function functionName(parameter-1, parameter-2,..., parameter-N) {
+                // function body
+                // logics
+            }
+        */
+
+
+        // Syntax
+        // Function Calling
+        /*
+            functionName(argument-1, argument-2,..., argument-N);
+        */
+
+        // input => two numbers => numOne and numTwo
+        // process => result = numOne + numTwo
+        // output => print the result
+
+
+        // add()
+        // Function Declaration
+        // function add(numOne, numTwo) { // let numOne = 20; let numTwo = 25;
+        //     let result = numOne + numTwo; // result = 20 + 25 => 45
+        //     console.log(result); // 45
+        // }
+
+        // // Function Calling
+        // add(20, 25);
+        // add(12, 20);
+        // add(4, 8);
+        // add(2, 1);
+
+        // Function => print only the even numbers
+        // argument => 20
+        // parameter => num
+        // functionName => printEvenNumbers()
+
+        // Function Declaration
+        // function printEvenNumbers(num) {
+        //     for (let i = 1; i <= num; i++) {
+        //         if (!(i % 2)) {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
+
+        // Function Calling
+        // printEvenNumbers(10); // 10
+        // printEvenNumbers(40); // 40
+        // printEvenNumbers(20); // 20
+
+        // Parameter and arguments => optional
+        // function add() {
+        //     let numOne = 2;
+        //     let numTwo = 3;
+        //     let result = numOne + numTwo;
+        //     console.log(result);
+        // }
+        // add();
+
+        // function displayMessage(name) {
+        //     console.log(`Welcome, ${name}`);
+        // }
+        // displayMessage("John");
+        // displayMessage("Jack");
+        // displayMessage("Robert");
+
+
+        // Local Variables and Outer Variables
+
+        // Local Variables => Scope of the local variables, resides only inside the function body
+        // Can't able to access and modify outside the function body
+        // function displayMessage() {
+        //     let message = "Welcome to Functions";
+        //     console.log(message);
+        //     let age = 25;
+        // }
+        // displayMessage(); // Welcome to Functions
+        // console.log(message); // Reference Error => "message" is not defined
+        // console.log(age); // Reference Error => "age" is not defined
+
+        // Outer Variable => Scope is throughout the program. (Can be accessed and modified inside and outside the function)
+        // let message = "Welcome, Outside function";
+        // function displayMessage() {
+        //     message = "Welcome, Inside function";
+        //     let age = 25;
+        //     console.log(message);
+        //     console.log(age);
+        //     let greeting = "Hello";
+        //     console.log(greeting);
+        // }
+        // console.log(message); // Welcome, Outside function
+        // displayMessage();
+        // console.log(message);
+
+        // Parameter
+        // function displayMessage(message, from) { // let message = "Welcome"; let from = "John"
+        //     message = "Hello";
+        //     from = "Jack";
+        //     console.log(message, from);
+        // }
+        // let message = "Welcome,";
+        // let user = "John";
+        // displayMessage(message, user);
+
+        // Default values
+        // function displayMessage(message, from = "John") { // let from;
+        //     console.log(message, from);
+        // }
+        // displayMessage("Hello", "Jack");
+
+        // Returning value
+        // function add(numOne, numTwo) {
+        //     let result = numOne + numTwo;
+        //     console.log(result); // 7
+        // }
+
+        // add(2, 5);
+
+        // function add(numOne, numTwo) {
+        //     let result = numOne + numTwo;
+        //     return result;
+        // }
+        // // let result = add(5, 10); // 15
+        // // console.log(result);
+        // console.log(add(5, 5));
+
+        // function add(numOne, numTwo) {
+        //     // let result = numOne + numTwo;
+        //     return numOne + numTwo;
+        // }
+        // console.log(add(5, 5));
+
+        // function anything(firstName, lastName = "Robert") {
+        //     let message = `FirstName: ${firstName} and LastName: ${lastName}`;
+        //     console.log(firstName)
+        //     console.log(lastName)
+        //     return message;
+        // }
+        // console.log(anything("John", "Jack"));
+
+        // function anything(firstName, lastName = "Robert") {
+        //     return `FirstName: ${firstName} and LastName: ${lastName}`;
+        // }
+        // console.log(anything("John", "Jack"));
+
+        // function checkAccess(access) {
+        //     if (access === "Yes") {
+        //         return true
+        //     }
+        // }
+        // let access = prompt("Are you an admin?");
+        // if (checkAccess(access)) {
+        //     console.log("Access Granted");
+        // } else {
+        //     console.log("No Access");
+        // }
+
+        // Naming
+        // 1. Function name must be descriptive. Ex: add(), displayName() Don't: abc(), hello()
+        // 2. camelCase notation in case of multi-word function name. Ex: displayMessage(). Don't: display-name()
+
+        // 3. get, set. Ex: setAge(), getAge()
+
+        // function add(numOne, numTwo) {
+        //     return numOne + numTwo;
+        // }
+
+        // function add(numOne, numTwo, numThree) {
+        //     return numOne + numTwo + numThree;
+        // }
+
+        // console.log(add(20, 30));
+        // console.log(add(1, 2, 3));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Box Model">
+    <title>CSS - Box Model</title>
+    <style>
+        #box,
+        #box-one {
+            background: green;
+            color: white;
+            width: 250px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        #box-one {
+            background: blue;
+        }
+
+        .para {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background: red;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            /* Shorthand */
+            /* margin: top right bottom left */
+            margin: 10px 20px 30px 40px;
+            /* margin: top/bottom right/left */
+            margin: 20px 40px;
+            /* margin: top/right/bottom/left */
+            margin: 50px;
+
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            /* Shorthand */
+            /* padding: top right bottom left */
+            padding: 10px 15px 20px 25px;
+            /* padding: top/bottom left/right */
+            padding: 20px 40px;
+            /* padding: top/left/bottom/right */
+            padding: 40px;
+        }
+
+        .para-one {
+            padding: 40px;
+            /* border: thickness type color */
+            /* border: 1px solid red */
+            /* styles => solid, dotted, double */
+            border-top: 2px solid red;
+            border-bottom: 2px solid green;
+            border-left: 2px solid crimson;
+            border-right: 2px solid crimson;
+
+            border: 2px double red;
+            border: 2px dotted green;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Box Model</h1>
+    <!-- 
+        1. Margin => Add space between the elements / Add the space outer sides of the element
+        2. Border => Inbetween both the margin and padding
+        3. Padding => Add space inside the element
+        // CSS => Each and every element as a Box
+        // 4 sides => top, left, bottom and right
+     -->
+    <div id="box"></div>
+    <div id="box-one"></div>
+
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, enim.</p>
+
+    <p class="para-one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, mollitia?</p>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Bootstrap Files">
+    <title>Bootstrap - Files</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="./bootstrap-5/css/bootstrap.min.css">
+    <style>
+        .box {
+            border: 2px solid red;
+            min-height: 50px;
+            background: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        breakpoints: 
+            sm => >= 576px, 
+            md => >= 768px, 
+            lg => >= 992px, 
+            xl => >= 1200px, 
+            xxl => >= 1400px
+        1. container => max-width in all the breakpoints
+        2. container-fluid => width: 100% in all the breakpoints
+        3. container-breakpoints => width: 100% until the specified breakpoint
+            container-sm
+            container-md
+            container-lg
+            container-xl
+            container-xxl
+     -->
+    <!-- <div class="container-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium alias veritatis
+        aliquid
+        omnis soluta!
+        Maiores nam autem neque quam id debitis amet officia aut, quae asperiores pariatur unde harum esse quas eos
+        deleniti laboriosam incidunt possimus ex quos exercitationem facere quisquam molestiae eveniet. Ratione placeat
+        blanditiis recusandae eius dolor molestias id facere voluptate libero officiis, dolores deserunt consectetur,
+        architecto eveniet? Et doloremque esse minima, officia recusandae obcaecati expedita magni placeat consequatur.
+        Aliquid delectus sint possimus ad sit numquam minima deserunt velit dicta minus aspernatur ipsa, fugiat, eveniet
+        libero asperiores fuga explicabo. Et architecto ipsam cumque consequatur, amet odio harum eum perspiciatis
+        dolorum obcaecati necessitatibus facilis quia itaque consequuntur? Minima ex officia alias ad hic at adipisci
+        tempora cumque fugiat, repudiandae nulla delectus molestiae illo beatae ab numquam doloribus maxime, rem soluta
+        et repellat nihil blanditiis. Sunt accusantium dolor, eius deleniti dolore neque expedita, vero consequatur ut
+        fugit voluptates? Quae, nostrum?</div> -->
+    <!-- 
+        Multi-column layout
+        1. container
+        2. row
+        3. col
+
+        Layout => row => 1 and column => 3
+        Parent => row
+        Child => col
+        Applies the property of "display: flex"
+
+        Grid => 12 grids
+
+        gutters => gap
+        g => gap on x and y axis
+        gx => gap only on x-axis
+        gy => gap only on y-axis
+
+        0 to 5 
+        col-{breakpoint}
+        col-{breakpoint}-{value}
+        row-cols-{breakpoint}-{value}
+        col-auto
+     -->
+    <div class="container-fluid">
+        <div class="row g-3 row-cols-md-3">
+            <div class="col">
+                <div class="box">Hello</div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap 5 JS -->
+    <script src="./bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

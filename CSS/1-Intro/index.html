@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Intro">
+    <title>CSS - Intro</title>
+    <style>
+        /* Comments */
+        /*
+            CSS Properties using the selectors
+        */
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: green;
+        }
+
+
+        @media (min-width:1200px) {
+            .display-5 {
+                font-size: 3rem
+            }
+        }
+
+        .display-6 {
+            font-size: calc(1.375rem + 1.5vw);
+            font-weight: 300;
+            line-height: 1.2
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        CSS - Cascading Style Sheet. Apply the different style to each and every elements of a HTML page
+        Extention => .css Ex: style.css
+        1. Text formatting => font-type, font-size, font-weight, letter-spacing, word-spacing, line-height etc...
+        2. Background => color, image
+        3. Position => absolute, relative, fixed, sticky, static
+        4. Height and width 
+        5. Animation, Transitions, Tranform
+
+        // 1. Add new css property to a html element
+        // 2. Modify the existing css property already applied on the element
+
+        1. Selector => Select a html element in a html page
+        2. PropertyName => What type of property to be applied on the html element
+        3. PropertyValue => Value to the propertyName defined
+
+        // Select a html element 
+        <h1>This is a heading</h1>
+        <p>This is a paragraph</p>
+
+        // Syntax
+        selector {
+            propertyName-1 : propertyValue-1;
+            propertyName-2 : propertyValue-2;
+                           :
+                           :
+            propertyName-N : propertyValue-N;
+        }
+
+        // Text Context color: black to color: red;
+        h1 {
+            color: red;
+        }
+
+        // How too connect html elements and css selectors
+        <style>...</style> => usually present in the <head>...</head> section 
+        <style>
+            h1 {
+                color: red;
+            }
+        </style>
+     -->
+
+    <hr>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph</p>
+</body>
+
+</html>

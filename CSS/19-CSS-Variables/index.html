@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Variables">
+    <title>CSS - Variables</title>
+    <style>
+        /* 
+            root => base element for a html pages
+            html
+              -> head
+              -> body
+                -> HTML elements 
+        
+        */
+        /* CSS Properties */
+        /* 
+            Syntax
+            :root {
+                --var-Name : value;
+            }
+        */
+        :root {
+            --color-brown: black;
+            --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            --font-size: 32px;
+        }
+
+        h1 {
+            color: var(--color-brown);
+        }
+
+        h2 {
+            background: green;
+            color: var(--color-brown);
+            font-size: var(--font-size);
+        }
+
+        p {
+            font-family: var(--font-size);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Variables</h1>
+    <h2>This is a sub-heading</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, odit aliquid nesciunt tempora quas dolorum!
+        Eum provident nemo omnis obcaecati.</p>
+</body>
+
+</html>

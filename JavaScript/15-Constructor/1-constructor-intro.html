@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Constructor - Intro">
+    <title>Constructor - Into</title>
+</head>
+
+<body>
+    <h1>Constructor - Intro</h1>
+
+    <script>
+        // Constructor - Intro
+        // Constructor is also a function
+        // Constructor function can be called by using "new" keyword
+        // All the Constructor function name must starts with Capital letter. Ex: User(), Message()
+
+        // Function
+        // function userDetails() {
+        // logics
+        // }
+        // userDetails()
+
+        // Constructor Declaration
+        function ShowMessage() {
+            console.log("Hello"); // Hello
+        }
+
+        // Calling the Constructor function => "new"
+        // Syntax
+        // new FunctionName()
+        new ShowMessage();
+
+        // Function in creating objects
+        // function userDetails(name, age, isAdmin) {
+        //     return {
+        //         name: name,
+        //         age: age,
+        //         isAdmin: isAdmin
+        //     }
+        // }
+        // let john = userDetails("John", 25, true);
+        // console.log(john);
+        // let jack = userDetails("Jack", 28, false);
+        // console.log(jack);
+
+        // Constructor with Parameters
+        // Syntax
+        /*
+            function FunctionName(para-1, para-2, ..., para-N) {
+                this.varName-1 = para-1;
+                this.varName-2 = para-2;
+                this.varName-N = para-N;
+
+                // "return" keyword no need to mention explicitly
+            }
+            new FunctionName(arg-1, arg-2,..., arg-N);
+        */
+        // function UserDetails(name, age, isAdmin) {
+        //     // implicitly
+        //     // let this = { name: "John", age: 25, isAdmin: false};
+        //     this.name = name;
+        //     this.age = age;
+        //     this.isAdmin = isAdmin;
+        //     // implicitly
+        //     // return this;
+        // }
+        // let john = new UserDetails("John", 25, false);
+        // let jack = new UserDetails("Jack", 30, true);
+        // console.log(john);
+        // console.log(jack);
+
+        // // "return" in Constructor function "explicitly"
+        // function DisplayName() {
+        //     this.name = "John";
+        //     return;
+        // }
+        // console.log(new DisplayName().name);
+
+        // Methods in constructor
+        function UserDetails(name) {
+            this.name = name;
+            this.displayName = function () {
+                console.log(`Username is: ${this.name}`)
+            }
+        }
+        let john = new UserDetails("John"); // { name: "John", displayName() { console.log(...) }}
+        console.log(john);
+        john.displayName();
+
+    </script>
+</body>
+
+</html>

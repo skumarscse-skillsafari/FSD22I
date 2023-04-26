@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Units - rem">
+    <title>CSS - Units - rem</title>
+    <style>
+        /* 
+        rem => Relative, depends on root (html) element
+        p, li => 16px
+        h1 => 32px
+        h2 => 24px
+        */
+
+        html {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        .relative {
+            /* 
+                2 * root-element-value
+                2 * 30 => 60px
+            */
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Units - rem</h1>
+    <div>
+        <h2 class="absolute">Absolute Text</h2>
+    </div>
+
+    <div>
+        <h2 class="relative">Relative Text</h2>
+    </div>
+</body>
+
+</html>

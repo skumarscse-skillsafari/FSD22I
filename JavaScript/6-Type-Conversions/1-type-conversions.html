@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Type Conversions">
+    <title>Type Conversions</title>
+</head>
+
+<body>
+    <h1>Type Conversions</h1>
+
+    <script>
+        // Type Conversions
+        // Convert one type of data into another type
+        // String
+        // true => boolean
+        // let example = true;
+        // console.log(example);
+        // console.log(typeof example);
+
+        // // Syntax
+        // // String(value);
+        // console.log(String(example));
+        // console.log(typeof String(example));
+
+        // alert() => auto convert in to a string
+        // alert(false);
+
+        // console.log(String(false)); // "false"
+        // console.log(String(null)); // "null"
+
+        // Number
+        // Number(value)
+        // let example = "123";
+        // console.log(example); // "123"
+        // console.log(Number(example)); // 123
+
+        // console.log(Number("Hello")); // NaN
+
+        // // Number
+        // // undefined => NaN
+        // // string => NaN
+        // // null => 0
+        // // true and false => 1 and 0
+        // // numeric string => NaN
+        // // numeric string with whitespaces => white spaces will be removed and return number
+        // console.log(Number("              123             "));
+        // console.log(Number("987z")); // NaN
+
+        // Boolean 
+        // Boolean(value)
+        // true or false
+        // 1 => true
+        // 0 => false
+        // empty string, null, undefined, NaN => false
+        // other values except mentioned above can be considered as "true"
+
+        console.log(Boolean(undefined)); // false
+        console.log(Boolean("")); // false
+        console.log(Boolean(" ")); // true
+        console.log(Boolean("Hello")); // true
+        console.log(Boolean("123")); // true
+        console.log(Boolean("0")); // true
+    </script>
+</body>
+
+</html>

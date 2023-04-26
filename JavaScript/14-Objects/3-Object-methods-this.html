@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Object Methods - this keyword">
+    <title>Object Methods - this keyword</title>
+</head>
+
+<body>
+    <h1>Object Methods - this keyword</h1>
+
+    <script>
+        // Object Methods - this keyword
+        // Object => properties => String, number, boolean, null, undefined, object
+        // Object => function as property
+
+        // let city = function () {
+        //     console.log("The city is: Chennai")
+        // }
+
+        // let userDetails = {
+        //     firstName: "John",
+        //     lastName: "Jack",
+        //     age: 20
+        // }
+        // console.log(userDetails.firstName)
+        // console.log(userDetails.lastName)
+        // console.log(userDetails.age)
+        // userDetails.city = city;
+        // console.log(userDetails);
+        // userDetails.city();
+
+        // let userDetails = {
+        //     firstName: "John",
+        //     lastName: "Jack",
+        //     age: 25,
+        //     // city: function () {
+        //     //     console.log("Chennai");
+        //     // }
+        //     // short-hand
+        //     city() {
+        //         console.log("Chennai");
+        //     }
+        // }
+        // console.log(userDetails);
+        // userDetails.city();
+
+        // this => variable, which can be act as the current object which you are working
+        // let userDetails = {
+        //     name: "John",
+        //     age: 25,
+        //     city: "Chennai",
+        //     dispalyCity() {
+        //         console.log(`The city name is: ${this.city}`)
+        //     }
+        // }
+        // userDetails.dispalyCity();
+        // console.log(userDetails);
+
+        let userOne = {
+            name: "John"
+        }
+        let userTwo = {
+            name: "Jack"
+        }
+        let displayName = function () {
+            console.log(this.name)
+        }
+
+        userOne.displayName = displayName;
+        userTwo.displayName = displayName;
+        console.log(userOne);
+        console.log(userTwo);
+        userOne.displayName();
+        userTwo.displayName();
+
+    </script>
+</body>
+
+</html>

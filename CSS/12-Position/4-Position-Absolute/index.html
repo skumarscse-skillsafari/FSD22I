@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Position: Absolute">
+    <title>Position: Absolute</title>
+    <style>
+        /* 
+            // Position: absolute;
+            // offset: top, left, bottom, right
+            // Position: relative; => Parent
+            // Position: absolute; => Child
+            // top, left, bottom, right
+        */
+        .parent {
+            height: 400px;
+            width: 400px;
+            background: green;
+            position: relative;
+            top: 50px;
+            left: 250px;
+        }
+
+        .child {
+            height: 100px;
+            width: 100px;
+            background: crimson;
+            position: absolute;
+            top: 100px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+</body>
+
+</html>

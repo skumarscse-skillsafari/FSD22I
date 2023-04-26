@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="HTML Table">
+    <title>HTML Table</title>
+</head>
+
+<body>
+    <h1>HTML Table</h1>
+    <h2>Students Table</h2>
+    <!-- 
+        <table border="1">
+            <tr> => Table row
+                <td>...</td> => Table Column
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </table>
+     -->
+    <!-- Method - 1 -->
+    <table border="1">
+        <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Dept.</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>AAA</td>
+            <td>CSE</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>BBB</td>
+            <td>ECE</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>CCC</td>
+            <td>EEE</td>
+            <td>19</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- Method - 2 -->
+    <!-- 
+        <table>
+            <caption>...</table>
+            <thead>...</thead>
+            <tbody>...</tbody>
+            <tfoot>...</tfoot>
+        </table>
+     -->
+    <h2>Student Table - Method - 2</h2>
+    <table border="1">
+        <caption>Student Table</caption>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Dept.</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>AAA</td>
+                <td>CSE</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>BBB</td>
+                <td>EEE</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>CCC</td>
+                <td>ECE</td>
+                <td>19</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>End of Table</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

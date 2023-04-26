@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Flex">
+    <title>CSS - Flex</title>
+    <style>
+        /* 
+        CSS - Flex
+        // Used to control the flow or position of the child elements on the parent
+        // Both in horizontal and vertical
+        // 1. display: flex;
+        // 2. flex-direction
+        // 3. flex-wrap
+        // 4. justify-content
+        // 5. align-items / justify-items
+        // 6. align-content
+        // 7. order
+        // 8. flex-grow
+        // 9. flex-shrink
+        // 10. flex-basis
+        // 11. gap
+        */
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: #f3f3f3;
+        }
+
+        .parent {
+            border: 5px solid red;
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* height: 100vh; */
+            /* flex-wrap: wrap; */
+            /* justify-content: space-evenly; */
+            /* align-items: flex-start; */
+            /* align-content: space-between; */
+            /* flex-direction, flex-wrap, align-items */
+
+            /* Center the child elements to the center of the screen */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            /* flex-grow, flex-shrink, flex-basis */
+
+            /* 
+            Flex => Controls the child elements of any parent element either in 
+            x-axis (horizontal / row) or 
+            y-axis (verical / column)
+            display: flex;
+            flex-direction: "row"; // x-axis => main-axis and y-axis => cross-axis
+            flex-direction: "column" // x-axis => cross-axis and y-axis => main axis
+
+            flex-direction: "row";
+            flex-wrap: "no-wrap"
+            justify-content: "flex-start" => control the child element in main-axis
+            align-items: "stretch" => control the child element in cross-axis
+            */
+        }
+
+        .box {
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: #f3f3f3;
+            /* flex-grow: 1; */
+        }
+
+        .child-1 {
+            background: #581f18;
+        }
+
+        .child-2 {
+            background: #f0a202;
+            /* width: 300px; */
+            flex-grow: 2;
+            /* flex-shrink: 1; */
+            flex-basis: 300px;
+        }
+
+        .child-3 {
+            background: #d95d39;
+            flex-grow: 1;
+        }
+
+        .child-4 {
+            background: #202c59;
+        }
+
+        .child-5 {
+            background: #51cb20;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box child-1">One</div>
+        <div class="box child-2">Two</div>
+        <div class="box child-3">Three</div>
+        <!-- <div class="box child-4">Four</div>
+        <div class="box child-5">Five</div> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Array">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+
+    <script>
+        // Array
+        // Array => Non-primitive datatype
+        // Data are stored in the form of "index", starts from "0"
+        // Object => store keyed collections of values
+        // Array => store values in sequence order by means of index
+        // Ex:
+        // [ "Apple", "Orange", "Mango" ]
+        // let fruits = ["Apple", "Orange", "Mango"];
+        // console.log(fruits);
+
+        // Object Declaration
+        // 1. new Object()
+        // 2. {..}
+
+        // Array Declaration
+        // 1. new Array()
+        // 2. []
+
+        // Syntax
+        // let varName = [ val-1, val-2, ..., val-N ]
+        // Values in the array => Elements or items
+        // let subjects = ["English", "Maths", "Physics", "Chemistry"];
+        // console.log(subjects);
+
+        // Access the array values
+        // Syntax
+        // varName[index]
+        // console.log(subjects[0])
+        // console.log(subjects[1])
+        // console.log(subjects[2])
+        // console.log(subjects[3])
+
+        // for (let i = 0; i < subjects.length; i++) {
+        //     console.log(subjects[i]);
+        // }
+
+        // Modify the existingValue
+        // Syntax
+        // varName[index] = newValue
+        // subjects[0] = "Computer";
+        // console.log(subjects);
+
+        // // Add new Element
+        // // Syntax
+        // // varName[index] = value
+        // subjects[4] = "English";
+        // console.log(subjects);
+
+        // subjects[6] = "Maths";
+        // console.log(subjects);
+
+        // // delete element
+        // // delete varName[index]
+        // delete subjects[6];
+        // console.log(subjects);
+
+
+        // Mix of Array
+        // let mixArray = ["Hello", 123, { "name": "John" }, [1, 2, 3], function () { console.log("Hello") }];
+        // // console.log(mixArray);
+        // console.log(mixArray[0]);
+        // console.log(mixArray[1]);
+        // console.log(mixArray[2].name);
+        // console.log(mixArray[3][0]);
+        // console.log(mixArray[3][1]);
+        // console.log(mixArray[3][2]);
+        // mixArray[4]();
+
+        // Access last element
+        // let subjects = ["English", "Maths", "Physics", "Chemistry"];
+        // console.log(subjects[subjects.length - 1]);
+
+        // at(-1)
+        // console.log(subjects.at(-1));
+
+        // pop()/push()
+        // shift()/unshift()
+
+        // arr.pop() => removes the last element in the array
+        // arr.push(elements) => adds new element(s) at the end of the array
+
+        // let userNames = ["John", "Jack", "Mary"];
+        // console.log(userNames);
+        // console.log(userNames.pop());
+        // console.log(userNames);
+
+        // userNames.push("Mary", "Robert", "Peter");
+        // console.log(userNames);
+
+        // arr.shift() => remove the first element in the array
+        // arr.unshift(element(s)) => add element(s) in the beginning of the array
+        // let userNames = ["John", "Jack", "Mary"];
+        // console.log(userNames);
+        // console.log(userNames.shift());
+        // console.log(userNames);
+        // userNames.unshift("John", "Robert", "Prince");
+        // console.log(userNames);
+
+        // for (const userName of userNames) {
+        //     console.log(userName);
+        // }
+
+        // for (const userName in userNames) {
+        //     console.log(userNames[userName]);
+        // }
+
+        // Multi-dimensional array
+        // Array inside an array
+        // let multiArray = [
+        //     [1, 2, 3], // [0] => [1, 2, 3]
+        //     [4, 5, 6], // [1] => [4, 5, 6]
+        //     [7, 8, 9]  // [2] => [7, 8, 9]
+        // ]
+        // console.log(multiArray[0][0]);
+        // console.log(multiArray[0][1]);
+        // console.log(multiArray[0][2]);
+        // console.log(multiArray[1][0]);
+        // console.log(multiArray[1][1]);
+        // console.log(multiArray[1][2]);
+        // console.log(multiArray[2][0]);
+        // console.log(multiArray[2][1]);
+        // console.log(multiArray[2][2]);
+
+
+    </script>
+</body>
+
+</html>

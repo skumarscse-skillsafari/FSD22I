@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Box-Sizing">
+    <title>CSS - Box-Sizing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box-one,
+        .box-two,
+        .box-three {
+            width: 200px;
+            height: 200px;
+            color: white;
+            font-size: 1.5rem;
+            margin: 2px;
+        }
+
+        .box-one {
+            background: green;
+            padding: 20px;
+            border: 10px;
+        }
+
+        .box-two {
+            background: red;
+        }
+
+        .box-three {
+            background: blue;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-one">
+        <p>Border Box</p>
+    </div>
+    <div class="box-two">
+        <p>Regular Box</p>
+    </div>
+    <div class="box-three">
+        <p>Box without border</p>
+    </div>
+</body>
+
+</html>

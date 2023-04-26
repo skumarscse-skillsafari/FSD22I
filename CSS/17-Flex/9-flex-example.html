@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Flex - Example">
+    <title>Flex - Example</title>
+    <style>
+        img {
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .parent {
+            border: 5px solid green;
+            padding: 10px 10px;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div><img src="./images/image-one.jpg" alt="image-one"></div>
+        <div><img src="./images/image-two.jpg" alt="image-two"></div>
+        <div><img src="./images/image-three.jpg" alt="image-three"></div>
+        <div><img src="./images/image-one.jpg" alt="image-four"></div>
+        <div><img src="./images/image-two.jpg" alt="image-five"></div>
+        <div><img src="./images/image-three.jpg" alt="image-six"></div>
+    </div>
+</body>
+
+</html>

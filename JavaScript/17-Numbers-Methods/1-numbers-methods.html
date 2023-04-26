@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Numbers - Methods">
+    <title>Numbers - Methods</title>
+</head>
+
+<body>
+    <h1>Numbers - Methods</h1>
+
+    <script>
+        // Numbers
+        // 1 billion
+        // 1,000,000,000
+        // let billion = 1_000_000_000;
+        // console.log(billion);
+
+        // // "e"
+        // // 1000000000 => 1e9 => 1 * 1000000000
+        // // e3 => 1000
+        // // e5 => 100000
+        // // e2 => 100
+
+        // // 2e5 => 2 * 100000
+
+        // // 3e6 => 3 * 1000000 => 3000000
+        // console.log(3e6);
+
+        // // 2e-3 => 2 * 1/1000 => 2 / 1000 => 0.002
+        // console.log(2e-3);
+
+        // // 4.5e-5 => 4.5 / 100000 =>
+        // console.log(4.5e-5); // 0.000045
+
+        // // Rounding => Decimal numbers => Whole number
+        // // Math()
+        // // 1. Math.floor() => Rounds down a number
+        // console.log(Math.floor(23.45)); // 23
+        // console.log(Math.floor(12.59)); // 12
+        // console.log(Math.floor(13.98)); // 13
+        // // 2. Math.ceil() => Rounds up the number
+        // console.log(Math.ceil(12.56)); // 13
+        // console.log(Math.ceil(11.43)); // 12
+        // console.log(Math.ceil(10.98)); // 11
+        // // 3. Math.round() => Rounds to the nearest number
+        // // .5 => base
+        // // < .5 => Rounds down
+        // // >= .5 => Rounds up
+        // console.log(Math.round(8.23)); // 8
+        // console.log(Math.round(7.46)); // 7
+        // console.log(Math.round(5.53)); // 6
+        // console.log(Math.round(8.68)); // 9
+        // // 4. Math.trunc() => Removes everything next to the decimal point
+        // console.log(Math.trunc(12.45)); // 12
+        // console.log(Math.trunc(10.56)); // 10
+        // console.log(Math.trunc(9.98)); // 9
+
+
+        // toFixed() => define the number of decimal points in the given decimal number
+        // console.log(12.4567890); // 12.45
+        // console.log(+12.4567890.toFixed(2));
+
+        // // isNaN() => to check str (Boolean)
+        // // isFinite() => to check numbers (Boolean)
+
+        // console.log(isNaN("Hello")); // true // true => parameter is string
+        // console.log(isNaN(123)); // false // false => parameter is number
+
+        // console.log(isFinite(123456)); // true => parameter is number
+        // console.log(isFinite("Hello")); // false => parameter is string
+
+        // parseInt() => return whole number from a string with whole number+string
+        /// Ex: 12px => 12
+        // console.log(parseInt("24px")); // 24
+        // console.log(parseInt("40px")); // 40
+        // console.log(parseInt("abc123")); // NaN
+        // // parseFloat() => return decimal number from a string with decimal number+string
+        // // Ex: 12.53px => 12.53
+        // console.log(parseFloat("12.53px")); // 12.43
+        // console.log(parseFloat("24.5px")); // 24.5
+        // console.log(parseFloat("abc12.43")); // NaN
+
+        // Math.random() => generate random numbers between 0.1 to 1
+        console.log(Math.ceil(Math.random() * 40));
+
+        // Math.max() => find the maximum number from the given set of numbers
+        // Math.min() => fims the minimun number from the given set of numbers
+
+        console.log(Math.max(12, 180, -23, 0, -1, 80)); // 180
+        console.log(Math.min(12, 180, -23, 0, -1, 80)); // -23
+
+        // Math.pow(a, b) => a^b => Math.pow(2, 10) => 2^10 => 1024
+        console.log(Math.pow(2, 10)); // 1024
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="General Adjacent Sibling">
+    <title>General Adjacent Sibling</title>
+    <style>
+        /* 
+        General Adjacent Sibling
+        1. It selects all the occurances of the siblings comes next to the reference sibling (top-bottom)
+        sibling-1 ~ sibling-2 {
+            properties;
+        }
+        */
+        p+p {
+            color: green;
+        }
+
+        p~p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>General Adjacent Sibling</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="#">Some Link</a>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h2>Hello</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

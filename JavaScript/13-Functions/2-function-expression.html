@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Function Expression">
+    <title>Function Expression</title>
+</head>
+
+<body>
+    <h1>Function Expression</h1>
+
+    <script>
+
+        // Function Expression
+        // let result = numOne + numTwo; // Expression
+
+        // function add() {
+        //     let numOne = 10;
+        //     let numTwo = 20;
+        //     let result = numOne + numTwo;
+        //     console.log(result);
+        // }
+        // add();
+
+        // let numOne = 10;
+        // let numTwo = 20;
+        // let result = numOne + numTwo;
+        // console.log(result);
+
+        // Function Expression (Declaration)
+        // Syntax
+        /*
+            let varName = function (para-1, para-2,..., para-N) {
+                // function body
+                // logics
+            }
+        */
+
+        // Function Calling
+        // Syntax
+        // varName(args-1, args-2,..., arg-N);
+
+        // let add = function () { // Anonymous function => Function without function name
+        //     let numOne = 10;
+        //     let numTwo = 20;
+        //     let result = numOne + numTwo;
+        //     console.log(result);
+        // }
+        // add();
+
+        // Advantage of using function expression
+        // let varOne = 20;
+        // let varTwo = varOne;
+        // console.log(varOne); // 20
+        // console.log(varTwo); // 20
+
+        // let addOne = add; // Copied function "add" to "addOne"
+        // addOne();
+
+        // let displayMessage = function (firstName, lastName) {
+        //     let message = `Welcome, ${firstName} ${lastName}`;
+        //     console.log(message);
+        // }
+        // displayMessage("John", "Jack");
+
+        // let displayMessage = function (firstName, lastName = "Robert") {
+        //     let message = `Welcome, ${firstName} ${lastName}`;
+        //     console.log(message);
+        // }
+        // displayMessage("John");
+
+        // let displayMessage = function (firstName, lastName) {
+        //     let message = `Welcome, ${firstName} ${lastName}`;
+        //     return message;
+        // }
+        // console.log(displayMessage("John", "Jack"));
+
+        // Callback function
+        // Passing function as a parameter
+        // function add(numOne, numTwo, result) { // let numOne = 5, let numTwo = 10, let result = output
+        //     let sum = numOne + numTwo;
+        //     result(sum);
+        // }
+
+        // let output = function (result) {
+        //     console.log(result);
+        // }
+
+        // add(5, 10, output);
+
+        // Function Declaration Vs Function Expression
+
+        // Function Declaration
+        // Call from anywhere in the program
+        // add();
+        // function add() {
+        //     let numOne = 10;
+        //     let numTwo = 20;
+        //     let result = numOne + numTwo;
+        //     console.log(result);
+        // }
+
+
+        // Function Expression
+        // Only be called after the function defined
+        // num = 123;
+        // let num;
+        // add();
+        // let add = function () {
+        //     console.log(10 + 5);
+        // }
+
+    </script>
+</body>
+
+</html>

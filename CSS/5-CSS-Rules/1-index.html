@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Rules">
+    <title>CSS - Rules</title>
+    <style>
+        /* 
+        1. Among inline, internal and external css, inline css has higher preference
+        2. id has more preference than class
+        3. !important
+        */
+        p {
+            color: red;
+            text-decoration: underline;
+        }
+
+        #id-name {
+            color: green;
+        }
+
+        .class-name {
+            color: coral;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 id="id-name" class="class-name">CSS - Rules</h1>
+    <p style="color: blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, aperiam!</p>
+</body>
+
+</html>

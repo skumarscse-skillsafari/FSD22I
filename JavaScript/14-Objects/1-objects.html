@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Objects">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Objects</h1>
+
+
+    <script>
+        // Objects
+        // Datatype => Non-Primitive datatype
+        // No fixed memory size. Memory varies based on the data it holds
+        // Data => key: value pair
+
+        // Syntax
+        // Object
+        // let varName = value;
+        // let varName = {
+        // key-1: value-1,
+        // key-2: value-2,
+
+        // key-N: value-N
+        // }
+        // varName => Object name
+        // {...} => Object literals
+        // key => propertyName
+        // value => propertyValue
+        // key: value => property
+
+        // Ex:
+        // let userDetails = { // userDetails => objectName
+        //     firstName: "John", // firtstName => key and "John" => value
+        //     lastName: "Jack", // lastName => key and "Jack" => value
+        //     age: 30, // age => key and 30 => value
+        //     isAdmin: false // isAdmin => key and false => value
+        // }
+        // firstName: "John" => "firstName" is the "key", stores the "value" => "John"
+        // console.log(userDetails);
+
+        // Create an Object
+        // 1. let objName = new Object(); // object constructor
+        // 2. let objName = {..} // Object literals
+
+        // Access the "key" value
+        // Access "value" from the object => objectName and propertyName
+        // Syntax
+        // objectName.propertyName
+        // let userDetails = {
+        //     firstName: "John",
+        //     lastName: "Jack",
+        //     age: 30,
+        //     isAdmin: false
+        // }
+        // console.log(userDetails.lastName); // "Jack"
+        // console.log(userDetails.isAdmin); // false
+
+        // Delete the object "property"
+        // Syntax
+        // delete objName.key
+        // delete userDetails.age;
+        // console.log(userDetails);
+
+        // Add new property and modify existing propertyValue
+        // Syntax
+        // Add new property
+        // objName.newKey = newValue;
+        // userDetails.city = "Chennai";
+        // console.log(userDetails);
+
+        // Modify existing propertyValue
+        // Syntax
+        // objName.existingKey = newValue;
+        // userDetails.firstName = "Mary";
+        // console.log(userDetails);
+
+        // 1. Create a Object
+        // 2. Add/modify the properties
+        // 3. delete the properties
+
+        // multi-word value as key
+        // first name => camelCase => firstName or double quotes => "first name"
+        // date of birth => camelCase => dateOfBirth or double quotes => "date of birth"
+        // let john = {
+        //     name: "John",
+        //     dateOfBirth: "01-01-2020",
+        //     "date of birth": "01-01-2023"
+        // }
+        // console.log(john.name);
+        // console.log(john.dateOfBirth);
+        // // Square bracket method to access the property
+        // // john["date of birth"]
+        // console.log(john["date of birth"]);
+
+        // Square bracket
+        // let user = {};
+        // // Add
+        // user["date of birth"] = "02-04-1998"
+
+        // // Access
+        // user["date of birth"];
+
+        // // Delete
+        // delete user["date of birth"]
+
+        // let user = {};
+        // let key = "first name";
+        // user[key] = "John"; // user["first name"] = "John"
+        // console.log(user);
+
+        // let user = {
+        //     name: "John",
+        //     age: 30
+        // }
+        // let key = prompt("Enter the property"); // age
+        // console.log(user[key]);
+
+        // Not works with "."
+        // let user = {
+        //     name: "John",
+        //     age: 30
+        // }
+        // let key = prompt("Enter the property"); // age
+        // console.log(user.key); // user."age" // undefined // Not recommended
+
+        // function userDetails(firstName, lastName, age, isAdmin) {
+        //     return {
+        //         firstName: firstName,
+        //         lastName: lastName,
+        //         age: age,
+        //         isAdmin: isAdmin
+        //     }
+        // }
+
+        // console.log(userDetails("John", "Jack", 30, true))
+
+        // Short-hand property
+        // function userDetails(firstName, lastName, age, isAdmin) {
+        //     return {
+        //         firstName, // firstName: firstName => firstName
+        //         lastName,
+        //         age,
+        //         isAdmin
+        //     }
+        // }
+
+        // console.log(userDetails("John", "Jack", 30, true))
+
+        // { apple: 30, orange: 25, mango: 40 } => fruits
+
+        // function fruits(apple, orange, mango, banana) {
+        //     return {
+        //         apple,
+        //         orange,
+        //         mango: mango,
+        //         fruitFour: banana
+        //     }
+        // }
+        // console.log(fruits(30, 25, 40, 50));
+
+        // propertyName limitations
+        // 1. propertyName or Key should not be reserved words such as for, if, else, let, const
+        // 2. Key always must be a string. Ex: firstName, age, apple, Don't: true, null, undefined, 25, 30
+        // 3. Multi-word key => square bracket method or camelCase notation
+        // 4. Key name must be meaningful
+
+        // Checking property existance in the object using "in"
+        // Syntax
+        // "propName" in objName => Boolen => if propName exists => true else return false
+
+        // let fruits = { apple: 30, orange: 25, mango: 40 };
+        // console.log("apple" in fruits); // true
+        // console.log("banana" in fruits); // false
+
+        // for...in loop
+        // Iterate the object properties
+        // Syntax
+        /*
+            for (let varName in objName) {
+                // varName => iterate the properties of "objName"
+            }
+        */
+        // let fruits = { apple: 30, orange: 25, mango: 40 };
+        // for (let fruit in fruits) {
+        //     console.log(`${fruit} : ${fruits[fruit]}`);
+        // }
+
+        // let userDetails = {
+        //     firstName: "Jack",
+        //     lastName: "John",
+        //     age: 25,
+        //     isAdmin: true
+        // }
+        // // for...in
+        // for (let userDetail in userDetails) {
+        //     console.log(`${userDetail} => ${userDetails[userDetail]}`);
+        // }
+
+    </script>
+</body>
+
+</html>

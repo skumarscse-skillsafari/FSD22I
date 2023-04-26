@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="String - Methods">
+    <title>String - Methods</title>
+</head>
+
+<body>
+    <h1>String - Methods</h1>
+
+    <script>
+        // String - Methods
+        // Representation
+        // 1. Double quotes. Ex: "Hello"
+        // 2. Single quotes. Ex: "Hello"
+        // 3. Backticks. Ex: `Hello`
+
+        // let firstName = "John";
+        // let lastName = "Jack";
+        // let name = "The FullName is: " + firstName + "," + lastName;
+        // console.log(name);
+        // console.log("The result is: " + (15 + 5));
+        // console.log(`The result is: ${15 + 5}`);
+        // console.log(`
+        //             Hello, I am from Backtick
+        // `);
+        // console.log(`
+        // 1. Apple,
+        // 2. Orange,
+        // 3. Mango
+        // `);
+
+        // // length property
+        // // Check the length of the given string => count the number of characters in the given
+        // // string, including special character
+        // console.log("Hello".length); // 5
+        // console.log("Hello World".length); // 11
+
+        // Accessing the character from the string
+        // 1. index
+        // 2. charAt()
+        // Hello => H-e-l-l-o
+        // Presence of each characters in the string are in the form of "index" starts with "0"
+        // Hello => String
+        // H-e-l-l-o => Characters
+        // 0-1-2-3-4  => Index
+
+        // let str = "SkillSafari";
+        // S-k-i-l-l-S-a-f-a-r-i
+        // 0-1-2-3-4-5-6-7-8-9-10
+        // varName[index]
+        // "S" => 5 => str
+        // str[5] => "S"
+        // console.log(str[5]); // S
+        // console.log(str[2]); // i
+
+        // for() => Print all the characters in a String
+        // for (let i = 0; i < str.length; i++) { // 0 < 11
+        //     console.log(str[i]); // str[11] => SkillSafari
+        // }
+
+        // Access the last character of any String
+        // str[str.length - 1]
+        // let str = "SkillSafari"; // i
+        // console.log(str[str.length - 1]);
+
+        // // str.at(-1) => return last char of any given string
+        // // In a string, char can be denoted as index starts from "0" (left to right)
+        // // char can be denoted as index starts from "-1" (right to left)
+        // console.log(str.at(-2));
+
+        // str.charAt(pos/index)
+        // Access the charater from the string using index
+        // let str = "Hello";
+        // // H-e-l-l-o
+        // // 0-1-2-3-4
+        // console.log(str.charAt(1));
+
+        // for...of => Iterate the characters of the string
+        /*
+            for (let varName of "String") {
+                // varName
+            }
+        */
+        // for (const char of "SkillSafari") {
+        //     console.log(char);
+        // }
+
+        // let fruits = "Apple, Orange";
+        // for (const fruit of fruits) {
+        //     console.log(fruit);
+        // }
+
+        // changing the case
+        // str.toUpperCase()
+        // str.toLowerCase()
+
+        // let str = "EduKeys";
+        // console.log(str);
+        // console.log(str.toUpperCase());
+        // console.log(str.toLowerCase());
+
+        // Searching a substring
+        // Substring => part of a string
+        // Ex: SkillSafari => Skill, Safari, S
+
+        // str.indexOf(a, b) => index of the searching substring
+        // if, the index not matches with the substring => return "-1"
+        // Search operation => left to right
+        // a => substring we looking for
+        // b => pos => starting position of the search operation
+
+        // let str = "Welcome to the session on JavaScript";
+        // substring => "Java"
+        // let index = str.indexOf("Java"); // 26
+        // let index = str.indexOf("come"); // 3
+        // let index = str.indexOf("Hello"); // -1
+        // let index = str.indexOf("e"); // 1
+        // let index = str.indexOf("e", 5);
+        // let index = str.indexOf("t", 15); // 35
+        // console.log(index);
+
+        // let searchSubstring = "t";
+        // let pos = 0;
+        // while (true) {
+        //     let foundPos = str.indexOf(searchSubstring, pos); // 8
+        //     if (foundPos == -1) break;
+        //     console.log(`The Search String ${searchSubstring} => Found at: ${foundPos}`);
+        //     pos = foundPos + 1; // 9
+        // }
+
+        // str.lastIndexOf(substring, pos) => right to left
+        // console.log(str.lastIndexOf("t", 25)); // 11
+
+        // 1. str.indexOf() / str.lastIndexOf() => index
+        // 2. str.includes() / str.startsWith() / str.endsWith() => Boolean
+
+        // str.includes(a, b)
+        // a => searchString
+        // b => starting pos of the search operation (left to right)
+        // Boolean => true / false
+        // true => if the serachString is a part of given string
+        // false => if the searchString is not a part of given string
+
+        // let str = "Welcome to the session on JavaScript";
+        // console.log(str.includes("the")); // true
+        // console.log(str.includes("Hello")); // false
+        // console.log(str.includes("s")); // true
+        // console.log(str.includes("s", 20)); // false
+        // console.log(str.includes("S", 20)); // true
+
+        // str.startsWith(a, b)
+        // a => searchString
+        // b => pos
+        // console.log(str.startsWith("Welcome")); // true
+        // console.log(str.startsWith("the")); // false
+        // console.log(str.startsWith("the", 11)); // true
+
+        // console.log(str.endsWith("Script")); // true
+        // console.log(str.endsWith("session")); // false
+
+        // Getting a substring
+        // Extracting "substring" from a "string" => index
+        // 1. str.slice(a, b)
+        // a => start index
+        // b => end index
+        // 2. str.substring()
+        // 3. str.substr()
+
+
+        // str.slice(a, b)
+        // a => start index
+        // b => end index
+        // return a substring with the index value mentioned in "a" and "b-1"
+        // b = 7 => b - 1 => 7 - 1 => 6
+        // let str = "Welcome to the session on JavaScript";
+        // console.log(str.slice(0, 7)); // Welcome
+        // console.log(str.slice(8, 10)); // to
+        // console.log(str.slice(15, 22)); // session
+        // console.log(str.slice(15)); // session on JavaScript
+        // console.log(str.slice(26, 36)); // JavaScript
+        // console.log(str.slice(26)); // JavaScript
+
+        // str.slice() => negative index
+        // Hello
+        // H-e-l-l-o
+        // 0-1-2-3-4 // left to right
+        //-5-4-3-2-1  // right to left
+        // index => left to right and right to left
+        // H            0                   -5
+        // e            1                   -4
+        // l            2                   -3
+        // 1            3                   -2
+        // o            4                   -1
+
+        // console.log(str.slice(-10));
+        // console.log(str.slice(-13, -11)); // on
+
+        // str.substring(a, b)
+        // a => start index
+        // b => end index (similar to slice())
+        // startindex and endindex can be given interchangeably
+        // substring() => not supports negative values
+        // let str = "Welcome to the session on JavaScript";
+        // console.log(str.substring(0, 7)); // Welcome
+
+        // console.log(str.substring(7, 0)); // Welcome
+        // console.log(str.slice(7, 0)); //
+
+        // str.substr(a, b)
+        // a => start index
+        // b => length of the given string
+        // let str = "Welcome to the session on JavaScript";
+        // console.log(str.substr(0, 7)); // Welcome
+        // console.log(str.substr(8, 2)); // to
+
+        // console.log(str.substr(-10)); // JavaScript
+        // console.log(str.substr(-10, 10)); // JavaScript
+
+
+        // Compare two strings
+        console.log("a" > "A"); // true // 97 > 65
+        console.log("Hello" > "Hai"); // 101 > 97
+
+        // str.codePointAt(pos)
+        // "Hello"
+        console.log("Hello".codePointAt(0)); // 72
+        console.log("Hello".codePointAt(3)); // 108
+
+        // String.fromCodePoint(hexCode)
+        console.log(String.fromCodePoint(108)); // l
+        console.log(String.fromCodePoint(72)); // H
+
+
+
+
+
+    </script>
+</body>
+
+</html>

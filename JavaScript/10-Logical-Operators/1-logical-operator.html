@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Logical Operators">
+    <title>Logical Operators</title>
+</head>
+
+<body>
+    <h1>Logical Operators</h1>
+
+    <script>
+        // Logical Operators
+        // 1. OR (||)
+        // 2. AND (&&)
+        // 3. NOT (!)
+        // 4. Nullish Coalescing (??)
+
+        // OR (||)
+        // Binary operator => two operands
+        // Return Boolean but some cases retun any type
+        // operand-1 || operand-2
+        // comparison-1 || comparison-2
+        // (2 > 3) || (3 < 1)
+        // false || false => false
+
+        // 4 posibilities of return result
+        // true || true => true
+        // true || false => true
+        // false || true => true
+        // false || false => false
+        // Boolean OR operator the result will be false only if both the operands are false
+
+        // if (10 > 20 || 30 < 10) { // false || false => false
+        //     console.log("If block");
+        // } else {
+        //     console.log("Else block");
+        // }
+
+        // Application to check the student eligiblity to attend the interview
+        // Any one of the condition
+        // 1. HSC >= 65%
+        // 2. UG >= 70%
+        // 3. PG >= 75%
+        // let name = prompt("Enter student name");
+        // let dept = prompt("Enter dept name");
+        // let hsc = +prompt("Enter HSC mark percentage");
+        // let ug = +prompt("Enter UG mark percentage");
+        // let pg = +prompt("Enter PG mark percentage");
+        // console.log("------------- RESULT ---------------");
+        // console.log(`Student Name: ${name}`);
+        // console.log(`Student Dept : ${dept}`);
+        // console.log(`HSC mark percentage: ${hsc}`);
+        // console.log(`UG mark percentage: ${ug}`);
+        // console.log(`PG mark percentage: ${pg}`);
+        // if (hsc >= 60 || ug >= 70 || pg >= 75) {
+        //     console.log("Eligible to attend the interview");
+        // } else {
+        //     console.log("Not eligible to attend the interview");
+        // }
+        // console.log("----------------------------------------");
+
+        // OR operator always search for first "truthy" value
+        // if it founds "truthy" value return the result/value of that expression and come out of expression
+        // if none of the operands turns "true" return the result/value of last operand in the expression
+
+        // let result = 20 < 5 || 25 < 15 || "" || "World";
+        // console.log(result);
+
+        // short-circuit
+        // operand-1 || operand-2
+        // if operand-1 is "truthy" return operand-1 result/value
+        // if operand-1 is "falsy" return operand-2 result/value
+        // console.log(20 || "Hello");
+        // console.log(0 || "Hello");
+        // console.log("" || "Hello");
+
+        // AND (&&)
+        // binary operator => two operands
+        // operand => value or an expression
+        // 12 > 20 && 30 < 24 => false && false => false
+        // "Hello" && "World"
+        // result => boolean or any type
+
+        // true && true => true
+        // true && false => false
+        // false && true => false
+        // false && false => false
+
+        // console.log(14 < 25 && 25 > 5); // true && true => true
+
+        // AND => checks for first "falsy" value
+        // In a expression, if any one of the operand turns "false", return the variable or value
+        // of that operand and exit
+        // If none of the operand in the expression turns "false", return the variable or value of
+        // last operand
+
+        // let result = 12 > 10 && 20 < 30 && "Hello" && "World";
+        // console.log(result);
+
+        // console.log(0 && 1);
+
+        // // short-circuit
+        // // a && b
+        // // if a, false, return "a"
+        // // if a, true, return "b"
+
+        // let user = "";
+        // console.log(user && "Anonymous user");
+
+        // // OR
+        // let userName = prompt("Enter your name");
+        // console.log(userName || "Guest user...");
+
+        // NOT (!)
+        // true => false
+        // false => true
+
+        // console.log(!(12 > 10));
+        // console.log(!(10 > 20));
+
+        // Nullish Coalesching
+        // ??
+        // used to check the variable is defined or not
+        // check the variable has value or not
+        // a ?? b
+        // return a , if a is defined
+        // return b, if a is not defined
+
+        // let a;
+        // let b = "Hello";
+        // console.log(a ?? b);
+
+        // || and ??
+        let a = 0;
+        console.log(a ?? 20); // 0
+        console.log(a || 20); // 20
+
+
+    </script>
+</body>
+
+</html>
