@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Array - Methods" />
+    <title>Array - Methods</title>
+  </head>
+  <body>
+    <h2>Array - Methods</h2>
+
+    <script>
+      // Array - Methods
+      // Delete an array
+      //   let num = [1, 2, 3, 4, 5];
+      //   delete num[3];
+      //   console.log(num);
+      // pop() => remove the last element in the array
+      // shift() => remove the first element in the array
+
+      // Delete / Insert / Replace
+      // splice()
+      // Syntax
+      // arr.splice(startIndex, deleteCount) => delete/remove an element
+      // delete
+      //   let userNames = ["John", "Jack", "Mary", "Robert"];
+      //   console.log(userNames);
+      //   userNames.splice(2, 2);
+      //   console.log(userNames);
+
+      // Insert
+      //   userNames.splice(1, 0, "Prince", "Ram");
+      //   console.log(userNames);
+
+      // Replace
+      //   userNames.splice(2, 1, "Ram");
+      //   console.log(userNames);
+
+      // Negative index
+      //   userNames.splice(-2, 0, "Raj");
+      //   console.log(userNames);
+
+      // slice(a, b) => deleting an element
+      // a => start index
+      // b => end index
+      // slice(a, b) => return array of the elements starts from "a" to "b-1" index
+      // splice() vs slice()
+      // splice() => modify your original array
+      // slice() => make a copy of an original array and perform delete operation
+      //   let fruits = ["Apple", "Orange", "Mango", "Banana"];
+      //   console.log(fruits);
+      //   //   console.log(fruits.splice(1, 2));
+      //   //   console.log(fruits);
+      //   //   console.log(fruits.slice(1, 2)); // [ "Orange" ]
+      //   //   console.log(fruits);
+
+      //   let fruitsCopy = fruits.slice();
+      //   console.log(fruitsCopy);
+
+      // concat()
+      // slice() => makes a copy of original array and perform concat operation
+      //   let num1 = [];
+      //   let num2 = [1, 2, 3];
+      //   let num3 = [4, 5, 6];
+      //   console.log(num1.concat(num2, num3));
+      //   console.log(num1);
+
+      // Iterate array elements
+      // for(;;)
+      // for...of
+      // for...in
+      // forEach(function (ele, index, arr) {
+      // logics
+      //})
+      // Iteration
+      //   let userNames = ["John", "Jack", "Mary", "Robert"];
+      //   for (const userName of userNames) {
+      //     console.log(userName);
+      //   }
+      //   userNames.forEach(function (userName, index, array) {
+      //     console.log(`Username: ${userName}, Index: ${index}, Array: ${array}`);
+      //   });
+
+      // forEach() without "arr"
+      //   userNames.forEach(function (userName, index) {
+      //     console.log(`Username: ${userName}, Index: ${index}`);
+      //   });
+
+      // forEach() without "index" and "arr"
+      //   userNames.forEach(function (userName) {
+      //     console.log(`Username: ${userName}`);
+      //   });
+
+      // forEach() with "index"
+      //   userNames.forEach(function (userName, index) {
+      //     console.log(`Index: ${index}`);
+      //   });
+
+      // Search in Array
+      // indexOf()
+      // lastIndexOf()
+      // includes()
+
+      // indexOf(searchElement, startIndex) => 1 => if search element exists, else "-1"
+      //   let userNames = ["John", "Jack", "Mary", "Robert", "Mary"];
+      //   console.log(userNames.indexOf("Mary")); // 2
+      //   console.log(userNames.indexOf("Prince")); // -1
+      //   console.log(userNames.lastIndexOf("Mary")); // 4
+
+      //   let name = "SkillSafari";
+      //   console.log(name.indexOf("safari"));
+
+      // includes()
+      //   let name = "SkillSafari";
+      //   console.log(name.includes("Kill"));
+
+      //   let userNames = ["John", "Jack", "Mary", "Robert"];
+      //   console.log(userNames.includes("Ram")); // false
+
+      // find()
+      // findIndex()
+      // findLastIndex()
+
+      // findIndex()/findLastIndex()
+      //   let userNames = ["John", "Jack", "Mary", "Robert", "Mary"];
+
+      // Syntax
+      // arr.findIndex(function (ele, index, arr) {
+      // condition
+      // true => index of searching element
+      // false => "-1" as the result
+      // })
+      //   let searchIndex = userNames.findIndex(function (userName) {
+      //     return userName === "Mary";
+      //   });
+      //   console.log(searchIndex);
+
+      //   let searchLastIndex = userNames.findLastIndex(function (userName) {
+      //     return userName === "Mary";
+      //   });
+      //   console.log(searchLastIndex);
+
+      // Searching an element
+      // find()
+      // Syntax
+      // arr.find(function (ele, value, arr) {
+      // iterates the elements one by one
+      // condition
+      // true => the current element in the iteration
+      // false => go for next iteration
+      // no element matches the condition => return "undefined"
+      // })
+
+      //   let userNames = ["John", "Jack", "Mary", "Robert", "Mary"];
+      //   let searchEle = userNames.find(function (userName) {
+      //     if (userName === "Prince") {
+      //       return userName;
+      //     }
+      //   });
+
+      //   let searchEle = userNames.find((userName) => userName === "Mary");
+      //   console.log(searchEle);
+
+      let products = [
+        {
+          id: 1001,
+          category: "mobile",
+          product: "iPhone",
+          price: 50000,
+          rating: 4.5,
+        },
+        {
+          id: 1002,
+          category: "tv",
+          product: "OnePlus",
+          price: 75000,
+          rating: 4,
+        },
+        {
+          id: 1003,
+          category: "men's clothing",
+          product: "formal shirt",
+          price: 750,
+          rating: 3.5,
+        },
+        {
+          id: 1004,
+          category: "laptops",
+          product: "DELL",
+          price: 87000,
+          rating: 4.8,
+        },
+      ];
+
+      // id === 1003
+      let searchProduct = products.find((product) => product.id === 1003);
+      console.log(searchProduct);
+
+      // category === "mobile"
+      let searchCategory = prompt("Enter category").toLowerCase();
+      let result = products.find(
+        (product) => product.category === searchCategory
+      );
+      alert(JSON.stringify(result));
+
+      // product === "DELL"
+
+      // price > 50000
+
+      // ratings < 4
+    </script>
+  </body>
+</html>
