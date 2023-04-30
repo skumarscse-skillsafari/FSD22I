@@ -144,35 +144,312 @@
       // Searching an element
       // find()
       // Syntax
-      // arr.find(function (ele, value, arr) {
-      // iterates the elements one by one
-      // condition
-      // true => the current element in the iteration
-      // false => go for next iteration
-      // no element matches the condition => return "undefined"
-      // })
+      /*
+        arr.find(function(ele, index, arr) {
+            // 1. Iterates the array elements one by one
+            // condition => inside the callback function body
+            // Each and every element check with the condition
+            // if any of the element matches the condition, return the current elemnt in the iteration
+            // exit from the iteration
+            // if, no elements matches to the condition, it returns "undefined"
+        })
+      */
 
-      //   let userNames = ["John", "Jack", "Mary", "Robert", "Mary"];
+      let userNames = ["John", "Jack", "Mary", "Robert", "Mary"];
+      // Mary
       //   let searchEle = userNames.find(function (userName) {
-      //     if (userName === "Prince") {
-      //       return userName;
-      //     }
+      //     // Mary === "Mary"
+      //     console.log(userName);
+      //     return userName === "Mary";
       //   });
+      //   console.log(searchEle); // Mary
+
+      // let searchEle = userNames.find(function (userName) {
+      //     // Mary === "Mary"
+      //     console.log(userName);
+      //     return userName === "Prince";
+      //   });
+      //   console.log(searchEle); // undefined
 
       //   let searchEle = userNames.find((userName) => userName === "Mary");
       //   console.log(searchEle);
 
+      //   let products = [
+      //     {
+      //       id: 1001,
+      //       category: "mobiles",
+      //       product: "iPhone",
+      //       price: 50000,
+      //       rating: 4.5,
+      //     },
+      //     {
+      //       id: 1002,
+      //       category: "tv's",
+      //       product: "OnePlus",
+      //       price: 75000,
+      //       rating: 4,
+      //     },
+      //     {
+      //       id: 1003,
+      //       category: "men's clothing",
+      //       product: "formal shirt",
+      //       price: 750,
+      //       rating: 3.5,
+      //     },
+      //     {
+      //       id: 1004,
+      //       category: "laptops",
+      //       product: "DELL",
+      //       price: 87000,
+      //       rating: 4.8,
+      //     },
+      //   ];
+
+      // id === 1003
+      //   let searchProduct = products.find((product) => product.id === 1003);
+      // 1003
+      // { id: 1001, category: , product: , price: , rating: }
+      //   console.log(searchProduct);
+
+      //   // category === "mobile"
+      //   let searchCategory = prompt("Enter category").toLowerCase();
+      //   let result = products.find(
+      //     (product) => product.category === searchCategory
+      //   );
+      //   alert(JSON.stringify(result));
+
+      // product === "DELL"
+      //   let result = products.find((product) => product.product === "DELL");
+      //   console.log(result);
+
+      // price > 50000
+      //   console.log(products);
+      //   let result = products.find((product) => product.price > 50000);
+      //   console.log(result);
+
+      // ratings < 4
+      //   let result = products.find((product) => product.rating < 4);
+      //   console.log(products);
+      //   console.log(result);
+
+      // Note: Use find() only if you want to find some element in the array based on "unique property"
+
+      // filter()
+      // Syntax
+      /*
+        arr.filter(function (ele, index, arr) {
+            // condition
+            // iterate the elements one by one and check with the condition
+            // if, any of the element matches the condition, return that element to an array 
+            // and go for next iteration
+            // it iterate all the elements present in the array even if the condition turns false
+            // if no elements matches the condition, it return empty array as result
+        })
+      */
+
+      //   console.log(products);
+      // price >= 50000
+      //   let result = products.filter((product) => product.price >= 50000);
+      //   console.log(result);
+
+      // ratings > 4
+      //   let result = products.filter((product) => product.rating >= 4);
+      //   console.log(result);
+
+      //   let result = products.filter((product) => product.rating < 2);
+      //   console.log(result);
+
+      // products array
+      // Price
+      //   let searchString = +prompt("Enter product price");
+      //   console.log(`User Search String: ${searchString}`);
+      //   console.log("---------- RESULT -------------");
+      //   let result = products.filter((product) => product.price <= searchString);
+      //   result.length != 0
+      //     ? console.table(result)
+      //     : console.log("No products found");
+
+      // Rating
+      //   let searchString = +prompt("Enter product rating");
+      //   console.log(`User Search String: ${searchString}`);
+      //   console.log("---------- RESULT -------------");
+      //   let result = products.filter((product) => product.rating <= searchString);
+      //   result.length != 0
+      //     ? console.table(result)
+      //     : console.log("No products found");
+
+      // Rating >= 4
+      // Price <= 50000
+      //   let searchRating = +prompt("Enter Rating");
+      //   let searchPrice = +prompt("Enter Price");
+      //   let result = products.filter(
+      //     (product) =>
+      //       product.price >= searchPrice && product.rating >= searchRating
+      //   );
+      //   console.log("Rating: " + searchRating);
+      //   console.log("Price: " + searchPrice);
+      //   result.length != 0
+      //     ? console.table(result)
+      //     : console.log("No product matches to your condition");
+
+      // Tranform an array
+      // map()
+      // Syntax
+      /*
+        arr.map(function (ele, index, arr) {
+            // condition
+            // iterate the array element one by one
+            // it compare each and every element with the condition defined
+            // based on the condition, it return new element as an array
+        })
+      */
+      //   let fruits = ["Apple", "Orange", "Mango", "Banana"];
+      //   let newFruits = fruits.map((fruit) => fruit.length); //
+      //   // [5, 6, 5, 6]
+      //   console.log(fruits);
+      //   console.log(newFruits);
+
+      //   let products = [
+      //     {
+      //       id: 1001,
+      //       category: "mobiles",
+      //       product: "iPhone",
+      //       price: 50000,
+      //       rating: 4.5,
+      //     },
+      //     {
+      //       id: 1002,
+      //       category: "tv's",
+      //       product: "OnePlus",
+      //       price: 75000,
+      //       rating: 4,
+      //     },
+      //     {
+      //       id: 1003,
+      //       category: "men's clothing",
+      //       product: "formal shirt",
+      //       price: 750,
+      //       rating: 3.5,
+      //     },
+      //     {
+      //       id: 1004,
+      //       category: "laptops",
+      //       product: "DELL",
+      //       price: 87000,
+      //       rating: 4.8,
+      //     },
+      //   ];
+
+      //   console.log(products);
+      // { category: ...}
+      //   let categoryArr = products.map((product) => {
+      //     // {id: 1001, category: , product: , price: , rating: }
+      //     return {
+      //       category: product.category,
+      //     };
+      //   });
+      //   console.log(categoryArr);
+
+      // { id: , price: }
+      // Extracting set of properties from an existing property
+      //   let newProductArr = products.map((product) => {
+      //     return {
+      //       id: product.id,
+      //       price: product.price,
+      //     };
+      //   });
+      //   console.log(newProductArr);
+
+      // Add new property
+      // { isAvailabe: true }
+      //   let newProductsArr = products.map((product) => {
+      //     return {
+      //       id: product.id,
+      //       category: product.category,
+      //       product: product.product,
+      //       price: product.price,
+      //       rating: product.rating,
+      //       isAvailable: true,
+      //     };
+      //   });
+      //   console.log(newProductsArr);
+
+      // spread operator
+      // ...varName
+      // Object and Array
+      // newProperty / newElement to an existing object / array without modifing
+      // existing property / array
+
+      //   let newProductsArr = products.map((product) => {
+      //     // product = {id: 1001, category: , product: , price: , rating: }
+      //     return {
+      //       ...product,
+      //       isAvailable: true,
+      //       country: "India",
+      //     };
+      //   });
+      //   console.log(newProductsArr);
+
+      // { isAvailable: true } => { price: > 50000 }
+      // { isAvailable: false } => { price: < 49999 }
+      //   let newProductsArr = products.map((product) => {
+      //     if (product.price >= 50000) {
+      //       return {
+      //         ...product,
+      //         isAvailable: true,
+      //       };
+      //     }
+      //     if (product.price < 49999) {
+      //       return {
+      //         ...product,
+      //         isAvailable: false,
+      //       };
+      //     }
+      //   });
+      //   console.log(newProductsArr);
+
+      // reverse()
+      //   let num = [1, 2, 3, 4, 5];
+      //   console.log(num.reverse());
+
+      // split()
+      // join()
+
+      // split() => string into an array
+      // Syntax
+      // str.split("separator") => [...]
+      //   let names = "John, Jack, Mary, Robert";
+      //   console.log(names);
+      //   console.log(names.split(", "));
+
+      //   let name = "SkillSafari";
+      //   console.log(name.split(""));
+
+      // join() => array into a string
+      // Syntax
+      // arr.join("combinar")
+      //   let fruits = ["Apple", "Orange", "Mango", "Banana"];
+      //   console.log(fruits.join(", "));
+
+      // Reverse a string
+      // SkillSafari => irafaSllikS
+      //   let name = "SkillSafari";
+      //   // [ "i", "r", "a", "f", ....]
+      //   let reverseName = name.split("").reverse().join("");
+      //   console.log(reverseName);
+
+      // chaining => "products"
       let products = [
         {
           id: 1001,
-          category: "mobile",
+          category: "mobiles",
           product: "iPhone",
           price: 50000,
           rating: 4.5,
         },
         {
           id: 1002,
-          category: "tv",
+          category: "tv's",
           product: "OnePlus",
           price: 75000,
           rating: 4,
@@ -193,22 +470,50 @@
         },
       ];
 
-      // id === 1003
-      let searchProduct = products.find((product) => product.id === 1003);
-      console.log(searchProduct);
+      //   console.log(products);
+      //   // filter => price >= 50000, add: { isAvailable: true}
+      //   let newProductsArr = products
+      //     .filter((product) => product.price >= 50000)
+      //     .map((newproduct) => {
+      //       return {
+      //         ...newproduct,
+      //         isAvailable: true,
+      //       };
+      //     });
 
-      // category === "mobile"
-      let searchCategory = prompt("Enter category").toLowerCase();
-      let result = products.find(
-        (product) => product.category === searchCategory
-      );
-      alert(JSON.stringify(result));
+      //   console.log(newProductsArr);
 
-      // product === "DELL"
+      // reduce() => convert array of elements into a single element
+      // reduce() => left to right
+      // rightReduce() => right to left
+      // Syntax
+      /*
+        arr.reduce(function(accumulator, ele, index, arr) {
+            // logics
+            // accumulator => value => result of previous iteration (except 1st iteration)
+            // accumulator => initialValue => value => 1st iteration
+        }, [initialValue])
+      */
+      //   let num = [1, 2, 3, 4, 5];
+      //   let result = num.reduce((acc, currentValue) => acc + currentValue, 0);
+      // Iteration - 1
+      // acc = 0; currentValue = 1 => 0 + 1 => 1
+      // Iteration - 2
+      // acc = 1; currentValue = 2 => 1 + 2 => 3
+      // Iteration - 3
+      // acc = 3; currentValue => 3 => 3 + 3 => 6
+      // Iteration - 4
+      // acc = 6; currentValue => 4 => 6 + 4 => 10
+      // Iteration - 5
+      // acc = 10; currentValue => 5 => 10 + 5 => 15
+      //   console.log(result);
 
-      // price > 50000
-
-      // ratings < 4
+      // Array.isArray() => Check the given value is array or not
+      // true => given value is an "array"
+      // false => given value is not an array
+      //   let num = [1, 2, 3, 4, 5];
+      //   console.log(Array.isArray(num));
+      //   console.log(typeof num);
     </script>
   </body>
 </html>
