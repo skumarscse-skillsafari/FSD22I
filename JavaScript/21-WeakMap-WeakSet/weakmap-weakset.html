@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="WeakMap and WeakSet" />
+    <title>WeakMap and WeakSet</title>
+  </head>
+  <body>
+    <h2>WeakMap and WeakSet</h2>
+
+    <script>
+      // WeakMap and WeakSet
+      // Objects
+      // WeakMap => propertyName => Object
+      // weakSet => value => Object
+      let weakMap = new WeakMap();
+      console.log(weakMap);
+
+      // set()
+      // get()
+      // has()
+      // delete()
+
+      //   let john = { name: "John", age: 25 };
+      //   let jack = { name: "Jack", age: 30 };
+      //   weakMap.set(john, "John Details");
+      //   weakMap.set(jack, "Jack Details");
+      //   console.log(weakMap);
+
+      //   console.log(weakMap.get(john));
+
+      //   console.log(weakMap.has(jack));
+
+      //   weakMap.delete(jack);
+
+      //   console.log(weakMap);
+
+      // WeakSet
+      let weakSet = new WeakSet();
+      // Objects => unique objects
+      console.log(weakSet);
+      let john = { name: "John" };
+      weakSet.add(john);
+      console.log(weakSet);
+
+      // add()
+      // has()
+      // delete()
+    </script>
+  </body>
+</html>

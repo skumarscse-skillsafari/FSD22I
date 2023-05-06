@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Map" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>Map</h2>
+
+    <script>
+      // Map
+      // Object => used for storing keyed collection (key: value pair)
+      // Array => used for storing ordered collection (index)
+
+      // Map Vs Object
+      // Object => object propertyName (key) must be of type "string"
+      // Ex: let user = { name: "John", age: 25 }
+      // Map => propertName can be of anytype
+
+      // Map() => constructor method => "new" keyword
+      // Syntax
+      // let varName = new Map()
+      //   let userMap = new Map();
+      //   console.log(userMap);
+      // Add a property
+      // Syntax
+      // varName.set("key", value)
+      //   userMap.set("name", "John");
+      //   userMap.set("age", 25);
+      //   console.log(userMap);
+
+      // Object
+      //   let userObj = {};
+      //   //console.log(userObj);
+      //   userObj.name = "John";
+      //   userObj.age = 25;
+      //   console.log(userObj);
+
+      // Properties and Methods
+      // userMap.set(key, value) => add "value" by "key"
+      // userMap.get(key) => get the "value" by "key"
+      // userMap.has(key) => check the existance of the property by "key"
+      // userMap.delete(key) => delete the property by "key"
+      // userMap.clear() => delete all the peoperties
+      // userMap.size => return number of properties in the "Map"
+      // userMap.keys() => Iterable (array of keys) "keys"
+      // userMap.values() => Iterable (array of values) "values"
+      // userMap.entries() => Iterable (array of key, value pair) [key, value]
+
+      // userMap.set(key, value)
+      // Chain the set method
+      //   userMap.set("name", "John").set("age", 25).set("city", "Chennai");
+      //   console.log(userMap);
+
+      // Access map elements
+      //   console.log(userMap.get("age"));
+      //   console.log(userMap.get("name"));
+      //   console.log(userMap.get("state")); // undefined
+
+      // has("key") => Boolean
+      //   console.log(userMap.has("name"));
+      //   console.log(userMap.has("age"));
+      //   console.log(userMap.has("state"));
+
+      // delete("key")
+      //   userMap.delete("city");
+      //   console.log(userMap);
+
+      // clear()
+      //   userMap.clear();
+      //   console.log(userMap);
+
+      // size
+      //   console.log(userMap.size);
+
+      // Iterable methods
+      // forEach()
+      // keys()
+      // values()
+      // entries()
+
+      // forEach()
+      //   userMap.forEach((value, key) => {
+      //     console.log(`Key: ${key} => Value: ${value}`);
+      //   });
+
+      // keys() => for...of
+      //   console.log(userMap.keys());
+      //   for (const key of userMap.keys()) {
+      //     console.log(key);
+      //   }
+
+      // values()
+      //   console.log(userMap.values());
+      //   for (const value of userMap.values()) {
+      //     console.log(value);
+      //   }
+
+      // entries() => [key, value]
+      //   console.log(userMap.entries());
+      //   console.log(userMap);
+      //   for (const [key, value] of userMap) {
+      //     console.log(`Key: ${key} => Value: ${value}`);
+      //   }
+
+      //   console.log(userMap);
+
+      //   let fruitsMap = new Map([
+      //     ["Apple", 25],
+      //     ["Orange", 20],
+      //     ["Mango", 30],
+      //   ]);
+      //   console.log(fruitsMap);
+
+      //   let john = { name: "John", age: 25 };
+      //   let johnMap = new Map();
+      //   johnMap.set(john, "John Details");
+      //   console.log(johnMap);
+
+      // Object.entries() => Object to Map
+      //   let userObj = {
+      //     name: "John",
+      //     age: 25,
+      //     city: "Chennai",
+      //   };
+      //   console.log(userObj);
+
+      //   let userMap = new Map(Object.entries(userObj)); // [[name, John], [age, 25], [city, chennai]]
+      //   console.log(userMap);
+
+      // Object.fromEntries() => Map to Object
+      //   let fruitsMap = new Map([
+      //     ["Apple", 25],
+      //     ["Orange", 30],
+      //     ["Mango", 40],
+      //   ]);
+      //   console.log(fruitsMap);
+
+      //   let fruitsObj = Object.fromEntries(fruitsMap);
+      //   console.log(fruitsObj);
+    </script>
+  </body>
+</html>

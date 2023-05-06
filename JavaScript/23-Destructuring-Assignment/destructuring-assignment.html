@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Destructuring Assignment" />
+    <title>Destructuring Assignment</title>
+  </head>
+  <body>
+    <h2>Destructuring Assignment</h2>
+
+    <script>
+      // Destructuring Assignment
+      // Object
+      // Array
+      // Unpack the properties or elements of Object and Array
+
+      // Array
+      //   let userArr = ["John", "Jack", "Mary", "Robery"];
+      //   console.log(userArr);
+      //   console.log(userArr[0]);
+      //   console.log(userArr[1]);
+      //   console.log(userArr[2]);
+
+      // Syntax
+      // let [var-1, var-2, ..., var-N] = [ "arr-1", "arr-2",..., "arr-N"]
+
+      //   let [userOne, userTwo, userThree, userFour] = userArr; // ["John", "Jack", "Mary", "Robery"]
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(userThree);
+      //   console.log(userFour);
+
+      // Skip assignment
+      //   let [fruitOne, , , fruitFour] = ["Apple", "Orange", "Mango", "Banana"];
+      //   console.log(fruitOne);
+      //   console.log(fruitFour);
+
+      // Any array type
+      //   let [firstName, lastName] = "John, Jack".split(", "); // [ "John", "Jack"]
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      //   let [firstName, lastName] = new Set(["John", "Jack"]);
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      //   let [a, b, c] = "ABC";
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+
+      //   let user = {};
+      //   [user.firstName, user.lastName] = "John, Jack".split(", ");
+      //   console.log(user);
+
+      // swap
+      //   let [a, b] = [1, 2];
+      //   // a = 1
+      //   // b = 2
+      //   console.log("Before Swap");
+      //   console.log(`a: ${a}`);
+      //   console.log(`b: ${b}`);
+      //   [a, b] = [b, a];
+      //   console.log("After Swap");
+      //   console.log(`a: ${a}`);
+      //   console.log(`b: ${b}`);
+
+      // ...rest
+      //   let [userOne, ...restUser] = ["John", "Jack", "Mary", "Robert"];
+      //   console.log(userOne);
+      //   console.log(restUser);
+      //   let [userTwo, userThree, userFour] = restUser;
+      //   console.log(userTwo);
+      //   console.log(userThree);
+      //   console.log(userFour);
+
+      // Default values
+      //   let [admin, anonymousUser = "Jack"] = ["John", "Mary"];
+      //   console.log(admin);
+      //   console.log(anonymousUser);
+    </script>
+  </body>
+</html>

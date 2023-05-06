@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object Methods" />
+    <title>Object - Methods</title>
+  </head>
+  <body>
+    <h2>Object - Methods</h2>
+
+    <script>
+      // Object - Methods
+      // Object.keys()
+      // Object.values()
+      // Object.entries()
+      // Object.fromEntries()
+
+      let userDetails = {
+        name: "John",
+        age: 26,
+        isAdmin: true,
+        city: "Chennai",
+      };
+
+      // Object.keys(object) => Iterable keys (array of keys)
+      //   console.log(Object.keys(userDetails));
+      //   for (const key of Object.keys(userDetails)) {
+      //     console.log(key);
+      //   }
+
+      // Object.values(object) => Iterable values (array of values)
+      //   console.log(Object.values(userDetails));
+      //   for (const value of Object.values(userDetails)) {
+      //     console.log(value);
+      //   }
+
+      // Object.entries(object) => Iterable [key, value] pair (similar like Map)
+      //   console.log(Object.entries(userDetails));
+      //   for (const [key, value] of Object.entries(userDetails)) {
+      //     console.log(`Key => ${key} and Value => ${value}`);
+      //   }
+
+      let fruits = {
+        apple: 20,
+        orange: 10,
+        mango: 25,
+      };
+
+      // Output = { apple: 40, orange: 20, mango: 50}
+      console.log(fruits);
+      let newFruits = Object.fromEntries(
+        Object.entries(fruits).map((fruit) => [
+          // fruit => [apple, 20]
+          fruit[0],
+          fruit[1] * 2,
+        ])
+      );
+      console.log(newFruits);
+    </script>
+  </body>
+</html>
