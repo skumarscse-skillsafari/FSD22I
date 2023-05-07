@@ -80,6 +80,131 @@
       //   let [admin, anonymousUser = "Jack"] = ["John", "Mary"];
       //   console.log(admin);
       //   console.log(anonymousUser);
+
+      // Multi-Dimentional array
+      // let martix = [
+      //   [1, 2, 3],
+      //   [4, 5, 6],
+      //   [7, 8, 9],
+      // ];
+      // let [
+      //   [cell1, cell2, cell3],
+      //   [cell4, cell5, cell6],
+      //   [cell7, cell8, cell9],
+      // ] = martix;
+      // console.log(cell1);
+      // console.log(cell2);
+      // console.log(cell3);
+      // console.log(cell4);
+      // console.log(cell5);
+      // console.log(cell6);
+      // console.log(cell7);
+      // console.log(cell8);
+      // console.log(cell9);
+
+      // Object
+      // Syntax
+      // let {propName-1, propName-2,..., propName-N} = { propName-1: value, propName-2: value, ..., propName-N}
+      // let { name, age } = { name: "John", age: 25 };
+      // console.log(name);
+      // console.log(age);
+
+      // Order change
+      // let { age, name } = { name: "John", age: 25 };
+      // console.log(name);
+      // console.log(age);
+
+      // Alias name to the propertyName
+      // let { name: n, age: a } = { name: "John", age: 25 };
+      // console.log(n);
+      // console.log(a);
+
+      // Default values
+      // let {
+      //   name = "John",
+      //   age = 23,
+      //   city,
+      // } = { name: "Jack", age: 32, city: "Chennai" };
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+
+      // Default values in Alias name
+      // let { name: n = "John", age: a = 23 } = {};
+      // console.log(n);
+      // console.log(a);
+
+      // ...rest
+      // let userName = {
+      //   name: "John",
+      //   age: 23,
+      //   isAdmin: true,
+      //   city: "Chennai",
+      // };
+      // let { name, ...restProps } = userName;
+      // console.log(name);
+      // console.log(restProps);
+      // let { age, isAdmin, city } = restProps;
+      // console.log(age);
+      // console.log(isAdmin);
+      // console.log(city);
+
+      // Nested destructuring
+      // let userDetails = {
+      //   name: {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //   },
+      //   age: 25,
+      //   address: {
+      //     street: "abc street",
+      //     city: "Chennai",
+      //     zipcode: 987654,
+      //   },
+      //   hobbies: ["Cricket", "Football"],
+      // };
+      // let {
+      //   name: { firstName, lastName },
+      //   age,
+      //   address: { street, city, zipcode },
+      //   hobbies: [hobbyOne, hobbyTwo],
+      // } = userDetails;
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+      // console.log(street);
+      // console.log(city);
+      // console.log(zipcode);
+      // console.log(hobbyOne);
+      // console.log(hobbyTwo);
+
+      // Functions
+      // Array Destructuring
+      // function userName([name, age, city = "Chennai"]) {
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(city);
+      // }
+      // userName(["John", 23, "Bangalore"]);
+      // // let [name, age, city] = ["John", 23, "Chennai"]
+
+      // function num([numOne, ...restNum]) {
+      //   console.log(numOne);
+      //   // console.log(restNum);
+      //   restNum.forEach((num) => {
+      //     console.log(num);
+      //   });
+      // }
+      // num([1, 2, 3, 4, 5]);
+
+      // Object
+      // function userDetails({ name: n, ...restProps }) {
+      //   console.log(n);
+      //   let { age: a, city: c } = restProps;
+      //   console.log(a);
+      //   console.log(c);
+      // }
+      // userDetails({ name: "John", age: 23, city: "Chennai" });
     </script>
   </body>
 </html>

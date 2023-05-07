@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Traversing" />
+    <title>Traversing</title>
+  </head>
+  <body>
+    <h2>Traversing</h2>
+    <div id="demo">
+      <h2>Heading Two</h2>
+      <p id="para">This is a paragraph</p>
+      <h3>Heading Three</h3>
+    </div>
+
+    <script>
+      // Traverse to parent from child
+      // Traverse to child from parent
+      // Traverse between the sibllings
+
+      // Traverse to parent from child
+      // parentNode => get the parent of the child
+
+      //   let para = document.querySelector("#para");
+      //   console.log(para);
+      //   console.log(para.parentNode);
+
+      // Traverse to child from parent
+      // parentEle.firstElementChild => first child of the parent Element
+      // parentEle.lastElementChild => last child of the parent element
+      // parentEle.children => all the childs of the parent element as HTMLCollection
+
+      //   let demo = document.querySelector("#demo");
+      //   console.log(demo);
+      //   console.log(demo.firstElementChild);
+      //   console.log(demo.lastElementChild);
+      //   console.log(demo.children);
+
+      // Traverse between siblings
+      // currnetSibling.nextElementSibling()
+      // currentSibling.previousElementSibling()
+
+      //   let para = document.querySelector("#para");
+      //   console.log(para);
+      //   console.log(para.previousElementSibling);
+      //   console.log(para.nextElementSibling);
+    </script>
+  </body>
+</html>

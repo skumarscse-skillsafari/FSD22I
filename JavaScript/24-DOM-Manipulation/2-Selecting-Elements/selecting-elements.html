@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selecting Elements" />
+    <title>Selecting Elements</title>
+  </head>
+  <body>
+    <h2>Selecting Elements</h2>
+    <p id="para">This is a Paragraph</p>
+    <p>This is another paragraph</p>
+    <p>This is another paragraph - 1</p>
+    <ul id="list">
+      <li class="list-items">Home</li>
+      <li class="list-items">About</li>
+      <li class="list-items">Projects</li>
+      <li class="list-items">Contact</li>
+    </ul>
+    <hr />
+    <form action="#">
+      <input
+        type="radio"
+        name="subjects"
+        id="subject-1"
+        value="English"
+      />English
+      <input type="radio" name="subjects" id="subject-2" value="Maths" />Maths
+      <input
+        type="radio"
+        name="subjects"
+        id="subject-3"
+        value="Physics"
+      />Physics
+      <input
+        type="radio"
+        name="subjects"
+        id="subject-4"
+        value="Chemistry"
+      />Chemistry
+    </form>
+
+    <script>
+      // Selecting Elements
+      // 1. getElementById() => Select the element by "id"
+      // 2. getElementsByClassName() => Select all the elements matches "className"
+      // 3. getElementsByTagName() => Selects all the elements matches "TagNAme"
+      // 4. getElementsByName() => Selects all the elements matches "name" attribute
+      // 5. querySelector() => Select single element based on "CSS selector"
+      // 6. querySelectorAll() => Select more than one elements based on "CSS selectors"
+
+      // getElementById() => return HTML element
+      // Syntax
+      // document.getElementById("idName")
+      //   let para = document.getElementById("para");
+      //   console.log(para.textContent);
+
+      // getElementsByClassName("className") => return array like HTMLCollectionOf<Element>
+      // Syntax
+      // document.getElementsByClassName("className")
+      //   let listItems = document.getElementsByClassName("list-items");
+      //   console.log(listItems);
+      //   console.log(listItems[0].textContent);
+      //   console.log(listItems[1].textContent);
+      //   console.log(listItems[2].textContent);
+      //   console.log(listItems[3].textContent);
+      //   for (const listItem of listItems) {
+      //     console.log(listItem.textContent);
+      //}
+
+      // getElementsByTagName("tagName") => returns array like HTMLCollection
+      // Syntax
+      // document.getElementsByTagName("tagName")
+      //   let paras = document.getElementsByTagName("p");
+      //   console.log(paras);
+
+      // getElementsByName("nameAttributeValue") => return array like NodeListOf<HTMLElement>
+      // Syntax
+      //   let subjects = document.getElementsByName("subjects");
+      //   //   console.log(subjects);
+      //   // Array.from(NodeList) => Array like element
+      //   //   console.log(Array.from(subjects));
+      //   Array.from(subjects).forEach((subject) => {
+      //     console.log(subject.value);
+      //   });
+
+      // CSS Selectors
+      // querySelector()
+      // querySelectorAll()
+
+      // querySelector("cssSelector") => return HTMLObjectElement
+      // Syntax
+      //   let para = document.querySelector("#para");
+      //   console.log(para);
+
+      // querySelectorAll("cssSelector") => returns NodeListOf<HTMLObjectElement>
+      // Syntax
+      //   let listItems = document.querySelectorAll("[name='subjects']");
+      //   console.log(listItems);
+    </script>
+  </body>
+</html>
