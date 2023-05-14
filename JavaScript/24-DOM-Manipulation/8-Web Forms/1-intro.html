@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web Forms" />
+    <title>Web Forms</title>
+  </head>
+  <body>
+    <h2>Web Forms</h2>
+    <form action="#" id="form">
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="name"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <textarea
+          name="message"
+          id="message"
+          cols="21"
+          rows="5"
+          placeholder="Enter your message"
+        ></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script>
+      // Web forms
+      // click
+      // submit, change
+      let form = document.querySelector("#form");
+      console.log(form);
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Access the form elements
+        console.log(document.forms[0]);
+        let username = document.forms[0][0];
+        console.log(username.value);
+        let email = document.forms[0][1];
+        console.log(email.value);
+        let message = document.forms[0][2];
+        console.log(message.value);
+      });
+    </script>
+  </body>
+</html>

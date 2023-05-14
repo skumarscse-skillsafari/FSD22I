@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="append and prepend" />
+    <title>append and prepend</title>
+  </head>
+  <body>
+    <h2>append and prepend</h2>
+    <ul id="list">
+      <li>Home</li>
+    </ul>
+
+    <script>
+      // append and prepend
+      // append() => insert a node or nodes after the last child node of a parent element
+      // prepend() => insert a node or nodes before the first child of a parent element
+
+      // append() => add node
+      //   let list = document.querySelector("#list");
+      //   let li = document.createElement("li");
+      //   li.textContent = "About";
+      //   list.append(li);
+
+      // prepend() => add node
+      //   let list = document.querySelector("#list");
+      //   let li = document.createElement("li");
+      //   li.textContent = "About";
+      //   list.prepend(li);
+
+      // append() => add nodes
+      //   let menuArr = ["About", "Projects", "Contact"];
+      //   let list = document.querySelector("#list");
+      //   let menuNodes = menuArr.map((menu) => {
+      //     let li = document.createElement("li");
+      //     li.textContent = menu;
+      //     return li;
+      //   });
+      //   list.append(...menuNodes);
+
+      // prepend() => add nodes
+      let menuArr = ["About", "Projects", "Contact"];
+      let list = document.querySelector("#list");
+      let menuNodes = menuArr.map((menu) => {
+        let li = document.createElement("li");
+        li.textContent = menu;
+        return li;
+      });
+      list.prepend(...menuNodes);
+    </script>
+  </body>
+</html>

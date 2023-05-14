@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Manipulating Styles" />
+    <title>Manipulating Styles</title>
+    <style>
+      .show {
+        height: 200px;
+        width: 200px;
+        background: red;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Manipulating Styles</h2>
+    <ul id="list">
+      <li class="item-lists">Home</li>
+      <li class="item-lists">About</li>
+      <li class="item-lists">Projects</li>
+      <li class="item-lists">Contact</li>
+    </ul>
+
+    <div class="demo name hello">
+      <p>Paragraph</p>
+    </div>
+
+    <div class="box"></div>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <button id="toggle">Toggle</button>
+
+    <script>
+      // Manipulating Styles
+      // Syntax
+      // ele.style
+      //   let list = document.querySelector("#list");
+      //   console.log(list.style);
+      //   list.style.display = "flex";
+      //   list.style.justifyContent = "space-around";
+      //   list.style.background = "green";
+
+      //   let listItems = document.querySelectorAll(".item-lists");
+      //   console.log(listItems);
+      //   for (const ele of listItems) {
+      //     ele.style.listStyle = "none";
+      //   }
+
+      // className => return all the class name as a space separated string
+      //   let divEle = document.querySelector("div");
+      //   console.log(divEle.className.split(" "));
+
+      // classList => add(), remove(), replace(), contains(), toggle()
+      let addBtn = document.querySelector("#add");
+      let rmvBtn = document.querySelector("#remove");
+      let tgleBtn = document.querySelector("#toggle");
+
+      let divEle = document.querySelector(".box");
+
+      addBtn.addEventListener("click", () => {
+        divEle.classList.add("show");
+      });
+
+      rmvBtn.addEventListener("click", () => {
+        divEle.classList.remove("show");
+      });
+
+      tgleBtn.addEventListener("click", () => {
+        divEle.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

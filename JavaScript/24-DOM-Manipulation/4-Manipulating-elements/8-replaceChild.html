@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="replaceChild" />
+    <title>replaceChild</title>
+  </head>
+  <body>
+    <h2>replaceChild</h2>
+    <ul id="list">
+      <li>Home</li>
+    </ul>
+
+    <script>
+      // replaceChild
+      let parentEle = document.querySelector("#list");
+      // Syntax
+      // parentEle.replaceChild(newNode, existingNode)
+      let about = document.createElement("li");
+      about.textContent = "About";
+      parentEle.replaceChild(about, parentEle.firstElementChild);
+    </script>
+  </body>
+</html>

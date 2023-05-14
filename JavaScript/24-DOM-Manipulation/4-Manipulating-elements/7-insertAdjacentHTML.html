@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="insertAdjacentHTML" />
+    <title>insertAdjacentHTML</title>
+  </head>
+  <body>
+    <h2>insertAdjacentHTML</h2>
+    <ul id="list">
+      <li>About</li>
+    </ul>
+
+    <script>
+      // insertAdjacentHTML
+      // element.insertAdjacentHTML("position", text)
+      // position
+      // 1. beforebegin => before the element
+      // 2. afterbegin => before firstChild of the selected element
+      // 3. beforeend => after the lastChild of the selected element
+      // 4. afterend => after the element
+
+      let list = document.querySelector("#list");
+      list.insertAdjacentHTML("beforebegin", "<h2>Menu List</h2>");
+      list.insertAdjacentHTML("afterbegin", "<li>Home</li>");
+      list.insertAdjacentHTML("beforeend", "<li>Projects</li>");
+      list.insertAdjacentHTML("afterend", "<hr>");
+    </script>
+  </body>
+</html>

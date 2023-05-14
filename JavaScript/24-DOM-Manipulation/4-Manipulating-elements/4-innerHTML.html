@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Desccription" content="innerHTML" />
+    <title>innerHTML</title>
+  </head>
+  <body>
+    <h2>innerHTML</h2>
+    <button id="btn-demo">Add Demo</button>
+    <button id="btn-list">Add List</button>
+    <div id="demo"></div>
+    <ul id="list"></ul>
+
+    <script>
+      // innerHTML => add the set of HTML elements as a child element to the selected
+      // parent element
+
+      let demo = document.querySelector("#demo");
+      let list = document.querySelector("#list");
+      let btnDemo = document.querySelector("#btn-demo");
+      let btnList = document.querySelector("#btn-list");
+
+      btnDemo.addEventListener("click", () => {
+        demo.innerHTML = `
+                <p id="para">This is a paragraph</p>
+                <h3>Heading three</h3>
+                <a href="#">This is anchor link</a>
+                <hr>
+        `;
+      });
+
+      btnList.addEventListener("click", () => {
+        list.innerHTML = `
+                <li class="list-item">Home</li>
+                <li class="list-item">About</li>
+                <li class="list-item">Projects</li>
+                <li class="list-item">Contact</li>
+        `;
+      });
+    </script>
+  </body>
+</html>

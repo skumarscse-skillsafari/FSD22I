@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="after and before method" />
+    <title>after and before method</title>
+  </head>
+  <body>
+    <h2>after and before method</h2>
+    <ul id="list">
+      <li>Projects</li>
+    </ul>
+
+    <script>
+      // after and before method
+      // after() => insert a node or nodes after the specified/selected element
+      // before() => insert a node or nodes before the specified/selected element
+
+      // after()
+      // adding a node
+      //   let projects = document.querySelector("#list").firstElementChild;
+      //   let li = document.createElement("li");
+      //   li.textContent = "Contact";
+      //   projects.after(li);
+
+      // before()
+      // adding a node
+      //   let projects = document.querySelector("#list").firstElementChild;
+      //   let li = document.createElement("li");
+      //   li.textContent = "Contact";
+      //   projects.before(li);
+
+      // after() => adding nodes
+      //   let menuArr = ["Home", "About", "Education", "Contact"];
+      //   let menuNodes = menuArr.map((menu) => {
+      //     let li = document.createElement("li");
+      //     li.textContent = menu;
+      //     return li;
+      //   });
+      //   console.log(menuNodes);
+      //   let projects = document.querySelector("#list").firstElementChild;
+      //   projects.after(...menuNodes);
+
+      // before() => adding nodes
+      let menuArr = ["Home", "About", "Education", "Contact"];
+      let menuNodes = menuArr.map((menu) => {
+        let li = document.createElement("li");
+        li.textContent = menu;
+        return li;
+      });
+      console.log(menuNodes);
+      let projects = document.querySelector("#list").firstElementChild;
+      projects.before(...menuNodes);
+    </script>
+  </body>
+</html>

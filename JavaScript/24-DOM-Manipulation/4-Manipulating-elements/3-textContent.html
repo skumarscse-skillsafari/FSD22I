@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="textContent" />
+    <title>textContent</title>
+  </head>
+  <body>
+    <h2>textContent</h2>
+    <p id="para">This is a paragraph</p>
+
+    <ul id="list">
+      <li>Home</li>
+      <li>About</li>
+      <li style="display: none">Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      // textContent
+      // set or get the HTML content in a specified element
+      let para = document.querySelector("#para");
+      console.log(para.textContent);
+      para.textContent = "This is modified paragraph";
+
+      let list = document.querySelector("#list");
+      // textContent => returns all the selected elements textContent as a string without
+      // considering "styles"
+      console.log(list.textContent); // all the child elements HTML text as a string
+
+      // innerText => returns all the selected elements textContent as a string by
+      // considering "styles"
+      console.log(list.innerText);
+    </script>
+  </body>
+</html>

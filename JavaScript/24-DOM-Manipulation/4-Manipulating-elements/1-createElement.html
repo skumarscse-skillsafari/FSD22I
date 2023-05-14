@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="createElement" />
+    <title>createElement</title>
+  </head>
+  <body>
+    <h2>createElement</h2>
+    <div id="demo">
+      <h3>Heading Three</h3>
+    </div>
+
+    <script>
+      // createElement()
+      // Syntax
+      // document.createElement("tagName")
+      const para = document.createElement("p"); // <p></p> // { id:.., className:...}
+      para.id = "para";
+      para.className = "para-class";
+      // textContent
+      //   para.textContent = "This is a paragraph";
+
+      // document.createTextNode("textContent")
+      let text = document.createTextNode("This is a paragraph");
+      console.log(text);
+      para.appendChild(text); // add the given node as a last child of the specified eleemnt
+
+      let demo = document.querySelector("#demo");
+      demo.appendChild(para);
+      console.log(para); // <p id="para" class="para-class">This is a paragraph</p>
+    </script>
+  </body>
+</html>

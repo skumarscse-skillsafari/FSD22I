@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Events" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h2>Events</h2>
+    <p id="para" onclick="alert('Para is clicked')">This is a paragraph</p>
+    <h2 onclick="displayMessage(event)">HTML Events</h2>
+    <h2 id="msg">Level 0 Events</h2>
+    <ul id="list">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <h2 id="demo">This is a heading</h2>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+
+    <script>
+      // Events
+      // Add action added to a HTML element can be considered as Events
+      // click, mouseover, scroll, keypress
+      // 1. HTML events
+      // Adding events as an attribute
+      // "event" object
+      //   function displayMessage(event) {
+      //     // alert("I am a message function");
+      //     console.log(event);
+      //     console.log(event.target.textContent);
+      //   }
+
+      // 2. Level 0 events
+      //   let msg = document.querySelector("#msg");
+      //   msg.onclick = function (e) {
+      //     // alert("I am Level 0 Event");
+      //     // console.log(e);
+      //     // console.log(e.target.id);
+      //     console.log(this);
+      //     console.log(this.id);
+      //     console.log(this.textContent);
+      //   };
+
+      //   let listEle = document.querySelectorAll("li");
+      //   console.log(listEle);
+      //   listEle.forEach((list) => {
+      //     list.addEventListener("click", function () {
+      //       console.log(this.textContent);
+      //     });
+      //   });
+
+      // 3. Level 2 events
+      // 1. addEventListener()
+      // 2. removeEventListener()
+
+      let addBtn = document.querySelector("#add");
+      addBtn.addEventListener("click", addFn);
+      function addFn() {
+        alert("I am clicked!!!");
+      }
+
+      let rmvBtn = document.querySelector("#remove");
+      rmvBtn.addEventListener("click", () => {
+        addBtn.removeEventListener("click", addFn);
+      });
+
+      // Event
+      // 1. Event Bubbling => bottom to top => Ele on the event triggered to document
+      // 2. Event Capturing => top to buttom => document to the Ele triggered event
+      // Event Capturing => target => Event Bubbling
+      /*
+        <!doctype>
+        <html>
+            <head>...</head>
+            <body>
+                <div>
+                    <p>This a paragraph</p>
+                    <button>Click</button>    
+                </div>
+            </body>
+        </html>
+      */
+    </script>
+  </body>
+</html>

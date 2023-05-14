@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="cloneNode" />
+    <title>cloneNode</title>
+  </head>
+  <body>
+    <h2>cloneNode</h2>
+    <ul id="original">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Contacts</li>
+    </ul>
+
+    <div id="clone"></div>
+
+    <script>
+      // cloneNode
+      // Syntax
+      // originalNode.cloneNode(deep)
+      // deep => Boolean => true or false
+      // true => clone the element along with its descendants
+      // false => clone only the element
+      // by default => false
+
+      let original = document.querySelector("#original");
+      console.log(original.cloneNode());
+
+      let clone = document.querySelector("#clone");
+      clone.appendChild(original.cloneNode(true));
+    </script>
+  </body>
+</html>
