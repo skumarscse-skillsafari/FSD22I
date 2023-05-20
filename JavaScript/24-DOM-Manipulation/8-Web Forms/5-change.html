@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Change Event" />
+    <title>Change Event</title>
+  </head>
+  <body>
+    <h2>Change Event</h2>
+    <form action="#" id="form">
+      <p>
+        <input
+          class="demo"
+          type="text"
+          name="username"
+          id="name"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          class="demo"
+        />
+      </p>
+      <p>
+        <textarea
+          class="demo"
+          name="message"
+          id="message"
+          cols="21"
+          rows="5"
+          placeholder="Enter your message"
+        ></textarea>
+      </p>
+    </form>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Change Event => text, email, textarea
+      let inputElements = document.querySelectorAll(".demo");
+      console.log(inputElements);
+      for (const inputEle of inputElements) {
+        inputEle.addEventListener("change", function () {
+          console.log(this.value);
+        });
+      }
+    </script>
+  </body>
+</html>

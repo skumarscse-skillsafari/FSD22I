@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web API" />
+    <title>Web API</title>
+  </head>
+  <body>
+    <h2>Web API</h2>
+
+    <script>
+      // Web API
+      // 1. localStorage => Inbuilt storage in a browser => is stored permentaly until the user removed
+      // 2. sessionStorage => will be removed whwnever the user closed the browser or browser tab
+      //                   => stored based on URL. Ex: www.skillsafari.in => local/session data
+      //                   => www.skillsafari.in/about => local/session data
+      //                   => ket: value pair
+      // 3. Geolocation API
+      // 4. Fetch API
+
+      // Access the localStorage and sessionStorage
+      // window.localStorage or localStorage
+      // window.sessionStorage or sessionStorage
+
+      // Methods and Properties
+      // 1. localStorage.setItem("key", "value") or sessionStorage.setItem("key", "value")
+      // 2. localStorage.getItem("key") or sessionStorage.getItem("key")
+      // 3. localStorage.removeItem("key") or sessionStorage.removeItem("key")
+      // 4. localStorage.clear() or sessionStorage.clear()
+      // 5. localStorage.key(index) or sessionStorage.key(index)
+      // 6. localStorage.length or sessionStorage.length
+
+      // Add key: value
+      //   localStorage.setItem("name", "John");
+
+      //   sessionStorage.setItem("age", 25);
+
+      // Adding object
+      //   let john = {
+      //     name: "John",
+      //     age: 25,
+      //     city: "Chennai",
+      //   };
+
+      //   localStorage.setItem("John", JSON.stringify(john));
+      //   console.log(localStorage.getItem("John"));
+      //   console.log(JSON.parse(localStorage.getItem("John")));
+
+      // removeItem
+      localStorage.removeItem("John");
+    </script>
+  </body>
+</html>
