@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Fetch API" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <h2>Fetch API</h2>
+    <input
+      type="text"
+      name="search"
+      id="search"
+      placeholder="Search products..."
+    />
+    <input type="button" value="Search" id="search-btn" />
+    <hr />
+    <div id="result"></div>
+
+    <!-- 
+        Async operations in JS
+        1. Single threaded and synchronous programming language
+        Single thread => process only one instruction a time
+        Ex: 10 instructions
+        // Receive ins-1 => process => send the response
+        // Receive ins-2 => process => send the response
+        
+        // Async
+        // Access => process => response => multiple instructions at a same time
+        // 1. Callback functions
+        // 2. Promise
+        // 3. Async/Await method
+        
+        // Syntax
+        // fetch("url") => res as some data
+     -->
+    <script>
+      // Promise => initial: pending => Success: fulfilled and failure: rejected
+      //   fetch("https://fakestoreapi.com/products")
+      //     .then((res) => res.json())
+      //     .then((data) => console.log(data))
+      //     .catch((err) => console.log(err));
+
+      // Async/Await
+      let newProducts = [];
+      const fetData = async (url) => {
+        let res = await fetch(url);
+        console.log(res);
+        let products = await res.json();
+        console.log(products);
+        newProducts = [...products];
+        let productsArr = products.map((product) => {
+          return `
+                <div class=product-${product.id}>
+                    <p><strong>Title:</strong> ${product.title}</p>
+                    <p><strong>Description:</strong> ${product.description}</p>
+                    <p><strong>Category:</strong> ${product.category}</p>
+                    <p><img src=${product.image} alt=product-${product.id} height="100px" width="100px"/></p>
+                    <p><strong>Price:</strong> ${product.price}</p>
+                    <p><strong>Rating:</strong> ${product.rating.rate}</p>
+                    <p><strong>Count:</strong> ${product.rating.count}</p>
+                    <hr />
+                </div>
+                `;
+        });
+        // console.log(productsArr.join(" "));
+        document.querySelector("#result").innerHTML = productsArr.join(" ");
+      };
+
+      fetData("https://fakestoreapi.com/products");
+
+      let searchBtn = document.querySelector("#search-btn");
+      let searchTxt = document.querySelector("#search");
+      searchBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(newProducts);
+        let filteredProducts = newProducts.filter((prod) =>
+          prod.title.includes(searchTxt.value)
+        );
+        let productsArr = filteredProducts.map((product) => {
+          return `
+                <div class=product-${product.id}>
+                    <p><strong>Title:</strong> ${product.title}</p>
+                    <p><strong>Description:</strong> ${product.description}</p>
+                    <p><strong>Category:</strong> ${product.category}</p>
+                    <p><img src=${product.image} alt=product-${product.id} height="100px" width="100px"/></p>
+                    <p><strong>Price:</strong> ${product.price}</p>
+                    <p><strong>Rating:</strong> ${product.rating.rate}</p>
+                    <p><strong>Count:</strong> ${product.rating.count}</p>
+                    <hr />
+                </div>
+                `;
+        });
+        document.querySelector("#result").innerHTML = productsArr.join(" ");
+      });
+    </script>
+  </body>
+</html>

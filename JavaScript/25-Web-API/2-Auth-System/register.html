@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Registration Form" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="#" id="form">
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+          required
+        />
+      </p>
+      <p>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          required
+        />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
+      </p>
+      <p>
+        Already registered? <a href="./signin.html">Click here to signin</a>
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="submit-btn" />
+        <input type="reset" value="Clear" id="reset-btn" />
+      </p>
+    </form>
+
+    <script>
+      let form = document.querySelector("#form");
+      console.log(form);
+      let username = form[0];
+      let email = form[1];
+      let password = form[2];
+      let submitBtn = document.querySelector("#submit-btn");
+      let resetBtn = document.querySelector("#reset-btn");
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let userDetails = {
+          id: Math.floor(Math.random() * 1000),
+          username: username.value,
+          email: email.value,
+          password: password.value,
+        };
+        console.log(userDetails);
+        localStorage.setItem(userDetails.id, JSON.stringify(userDetails));
+        alert("User added successfully");
+        window.location.href = "./signin.html";
+      });
+    </script>
+  </body>
+</html>

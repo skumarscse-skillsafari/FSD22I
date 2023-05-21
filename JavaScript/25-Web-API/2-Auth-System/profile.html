@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Profile Page" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <h2>Profile Page</h2>
+    <h3>Welcome, <span id="displayName"></span></h3>
+    <button id="logout">Logout</button>
+    <hr />
+    <p>User ID:<span id="userId"></span></p>
+    <p>Username: <span id="userName"></span></p>
+    <p>User email:<span id="email"></span></p>
+
+    <script>
+      let displayName = document.querySelector("#displayName");
+      let logout = document.querySelector("#logout");
+      let userId = document.querySelector("#userId");
+      let userName = document.querySelector("#userName");
+      let email = document.querySelector("#email");
+
+      let urlParams = new URLSearchParams(location.search);
+      console.log(urlParams.values());
+      let [id] = urlParams.values();
+      console.log(id);
+      let userDetail = JSON.parse(sessionStorage.getItem(id));
+      console.log(userDetail);
+      displayName.textContent = userDetail.username;
+      userName.textContent = userDetail.username;
+      userId.textContent = userDetail.id;
+      email.textContent = userDetail.email;
+
+      logout.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("User loggedout successfully");
+        sessionStorage.removeItem(id);
+        window.location.href = "./signin.html";
+      });
+    </script>
+  </body>
+</html>
