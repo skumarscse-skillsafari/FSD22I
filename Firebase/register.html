@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Registration Form" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="#">
+      <p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Register" id="submit-btn" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0WGWZLBzQ_pD56zMW1I9hVk_iXNxrxjQ",
+        authDomain: "fsd22i.firebaseapp.com",
+        projectId: "fsd22i",
+        storageBucket: "fsd22i.appspot.com",
+        messagingSenderId: "60297267827",
+        appId: "1:60297267827:web:2214be339ddb8761f53806",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      let auth = getAuth();
+      let db = getDatabase();
+
+      // Authentication
+      let submitBtn = document.querySelector("#submit-btn");
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userDetails) => {
+            console.log(userDetails);
+            const uid = userDetails.user.uid;
+            set(ref(db, "users/" + uid), {
+              uid: uid,
+              username: username,
+              email: email,
+              createdAt: new Date().toISOString(),
+            });
+            alert("User created successfully");
+            setTimeout(() => {
+              window.location.href = "./signin.html";
+            }, 2000);
+          })
+          .catch((error) => {
+            console.log(error);
+            const errorCode = error.code;
+            console.log(errorCode);
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+      });
+    </script>
+  </body>
+</html>

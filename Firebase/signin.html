@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="SignIn Form" />
+    <title>SignIn Form</title>
+  </head>
+  <body>
+    <h2>SignIn Form</h2>
+    <form action="#">
+      <p>
+        <input type="email" name="email" id="email" placeholder="Enter email" />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        <input type="submit" value="SignIn" id="signin-btn" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0WGWZLBzQ_pD56zMW1I9hVk_iXNxrxjQ",
+        authDomain: "fsd22i.firebaseapp.com",
+        projectId: "fsd22i",
+        storageBucket: "fsd22i.appspot.com",
+        messagingSenderId: "60297267827",
+        appId: "1:60297267827:web:2214be339ddb8761f53806",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      let auth = getAuth();
+
+      // Authentication
+      let signinBtn = document.querySelector("#signin-btn");
+      signinBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userDetails) => {
+            const uid = userDetails.user.uid;
+            if (uid) {
+              alert("User logged in successfully");
+              setTimeout(() => {
+                window.location.href = `./profile.html?id=${uid}`;
+              }, 2000);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            const errorCode = error.code;
+            console.log(errorCode);
+            const errorMessage = error.message;
+            console.log(errorMessage);
+            alert("Something went wrong. Check user credentials...");
+          });
+      });
+    </script>
+  </body>
+</html>

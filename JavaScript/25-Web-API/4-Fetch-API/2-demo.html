@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Async/Await - try - catch" />
+    <title>Async/Await - try - catch</title>
+  </head>
+  <body>
+    <h2>Async/Await - try - catch</h2>
+    <form action="#">
+      <p>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search city weather update"
+        />
+      </p>
+      <input type="submit" value="Search" id="btn" />
+    </form>
+    <hr />
+    <div id="result"></div>
+
+    <script>
+      // Async/Await - try - catch
+      // API => http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9701e05bdc450703a5af1448835dd149
+
+      let btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let searchCity = document.querySelector("#search").value;
+        fetchWeatherData(
+          `http://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+            searchCity
+          )}&APPID=9701e05bdc450703a5af1448835dd149`
+        );
+      });
+
+      const fetchWeatherData = async (url) => {
+        try {
+          let res = await fetch(url);
+          let data = await res.json();
+          console.log(data);
+          let result = document.querySelector("#result");
+          result.innerHTML = `
+            <p>City: ${data.name}</p>
+            <p>Country: ${data.sys.country}</p>
+            <p>Temp: ${(data.main.temp - 272.15).toFixed(2)} C</p>
+            <p>Min. Temp: ${(data.main.temp_min - 272.15).toFixed(2)} C</p>
+            <p>Max. Temp: ${(data.main.temp_max - 272.15).toFixed(2)} C</p>
+          `;
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    </script>
+  </body>
+</html>

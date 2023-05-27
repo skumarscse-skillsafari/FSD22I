@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Profile Page" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <h2>Profile Page</h2>
+    <div
+      style="display: flex; justify-content: space-around; align-items: center"
+    >
+      <h2>Welcome, <span id="display-name"></span></h2>
+      <button id="logout">Logout</button>
+    </div>
+    <hr />
+    <table>
+      <tr>
+        <th>Username:</th>
+        <td><input type="text" name="username" id="username" /></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><input type="text" name="email" id="email" /></td>
+      </tr>
+      <tr>
+        <td><button id="edit">Edit</button></td>
+        <td><button id="delete">Delete</button></td>
+      </tr>
+    </table>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        onValue,
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA0WGWZLBzQ_pD56zMW1I9hVk_iXNxrxjQ",
+        authDomain: "fsd22i.firebaseapp.com",
+        projectId: "fsd22i",
+        storageBucket: "fsd22i.appspot.com",
+        messagingSenderId: "60297267827",
+        appId: "1:60297267827:web:2214be339ddb8761f53806",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      let db = getDatabase();
+
+      let displayName = document.querySelector("#display-name");
+      let username = document.querySelector("#username");
+      let email = document.querySelector("#email");
+      let edit = document.querySelector("#edit");
+      let deleteBtn = document.querySelector("#delete");
+      let logout = document.querySelector("#logout");
+
+      let urlQuery = new URLSearchParams(location.search);
+      let [id] = urlQuery.values();
+      console.log(id);
+
+      const userRef = ref(db, "users/" + id);
+      onValue(userRef, (snapshot) => {
+        const userDetail = snapshot.val();
+        console.log(userDetail);
+        displayName.textContent = userDetail.username;
+        username.value = userDetail.username;
+        email.value = userDetail.email;
+        sessionStorage.setItem(id, id);
+      });
+
+      logout.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (confirm("Are you sure to logout")) {
+          sessionStorage.removeItem(id);
+          setTimeout(() => {
+            window.location.href = "./signin.html";
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
+</html>
