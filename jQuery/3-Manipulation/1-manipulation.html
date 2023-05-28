@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Manipulation methods" />
+    <title>Manipulation methods</title>
+  </head>
+  <body>
+    <h2>Manipulation methods</h2>
+    <div id="demo">
+      <p>This is a paragraph.</p>
+    </div>
+
+    <p id="para">Paragraph.</p>
+
+    <div>
+      <span>This is span text.</span>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Manipulation methods
+      // append()
+      // before()
+      // after()
+      // prepend()
+      // remove()
+      // replaceAll()
+      // wrap()
+
+      // after() => insert content after a selected element
+      //   $("#demo").after('<h2 style="color: green">Heading Two</h2>');
+
+      //   $("#demo").before('<h2 style="color: green">Heading Two</h2>');
+
+      // append() => insert content at the end of the selected element
+      // prepend() => insert content at the beginning of the selected element
+
+      //   $("#para").append(" This text is added at the end.");
+      //   $("#para").prepend("This text is added at the beginning. ");
+
+      // remove() => remove the selected element
+      //   $("#para").remove();
+
+      // replaceAll() => replaces all the selected element with the new one
+      //   $("<h3 style='color: green'>Heading Three</h3>").replaceAll("p");
+
+      // wrap() => wrap the selected element with the specified content element
+      $("span").wrap("<p id='wrap'></p>");
+    </script>
+  </body>
+</html>

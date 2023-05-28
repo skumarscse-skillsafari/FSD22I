@@ -37,7 +37,14 @@
         getDatabase,
         ref,
         onValue,
+        child,
+        push,
+        update,
       } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+      import {
+        getAuth,
+        deleteUser,
+      } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
       // Your web app's Firebase configuration
       const firebaseConfig = {
@@ -53,6 +60,7 @@
       const app = initializeApp(firebaseConfig);
 
       let db = getDatabase();
+      let auth = getAuth();
 
       let displayName = document.querySelector("#display-name");
       let username = document.querySelector("#username");
@@ -65,13 +73,16 @@
       let [id] = urlQuery.values();
       console.log(id);
 
+      let createdAt = null;
+
       const userRef = ref(db, "users/" + id);
       onValue(userRef, (snapshot) => {
-        const userDetail = snapshot.val();
+        const userDetail = snapshot?.val();
         console.log(userDetail);
-        displayName.textContent = userDetail.username;
-        username.value = userDetail.username;
-        email.value = userDetail.email;
+        createdAt = userDetail?.createdAt;
+        displayName.textContent = userDetail?.username;
+        username.value = userDetail?.username;
+        email.value = userDetail?.email;
         sessionStorage.setItem(id, id);
       });
 
@@ -79,6 +90,48 @@
         e.preventDefault();
         if (confirm("Are you sure to logout")) {
           sessionStorage.removeItem(id);
+          setTimeout(() => {
+            window.location.href = "./signin.html";
+          }, 2000);
+        }
+      });
+
+      edit.addEventListener("click", (e) => {
+        e.preventDefault();
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#email").value;
+        let newData = {
+          username: username,
+          email: email,
+          uid: id,
+          createdAt: createdAt,
+        };
+        console.log(newData);
+        if (confirm("Are you sure to edit the details?")) {
+          const updates = {};
+          updates["/users/" + id] = newData;
+          update(ref(db), updates);
+          alert("User details updated successfully");
+        }
+      });
+
+      deleteBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const user = auth.currentUser;
+        console.log(user);
+        if (confirm("Are you sure to delete the account?")) {
+          deleteUser(user)
+            .then(() => {
+              console.log("User deleted");
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+          const updates = {};
+          updates["/users/" + id] = null;
+          update(ref(db), updates);
+          sessionStorage.removeItem(id);
+          alert("User account deleted successfully");
           setTimeout(() => {
             window.location.href = "./signin.html";
           }, 2000);

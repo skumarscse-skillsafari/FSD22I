@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Fetch API - Post Data" />
+    <title>Fetch API - Post Data</title>
+  </head>
+  <body>
+    <h2>Fetch API - Post Data</h2>
+    <form action="#" id="form">
+      <p>
+        <input type="text" name="title" id="title" placeholder="Enter title" />
+      </p>
+      <p>
+        <textarea
+          name="description"
+          id="description"
+          cols="21"
+          rows="5"
+          placeholder="Enter description"
+        ></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="btn" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script>
+      // Fetch API - Post Data
+      /*
+            fetch("url", optionsObject)
+            GET
+            fetch("url");
+
+            POST
+            fetch("url", {
+                method: "POST",
+                body: formData
+            })
+        */
+
+      let form = document.querySelector("#form");
+      let btn = document.querySelector("#btn");
+
+      const postData = async (url) => {
+        let res = await fetch(url, {
+          method: "POST",
+          body: new FormData(form),
+        });
+
+        let data = await res.json();
+        console.log(data);
+      };
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        postData("https://fakestoreapi.com/products");
+      });
+    </script>
+  </body>
+</html>
