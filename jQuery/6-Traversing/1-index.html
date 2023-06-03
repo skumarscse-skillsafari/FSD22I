@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Traversal methods" />
+    <title>jQuery - Traversal methods</title>
+  </head>
+  <body>
+    <h2>jQuery - Traversal methods</h2>
+    <ul id="list">
+      <li>Home</li>
+      <li class="list-item">About</li>
+      <li class="list-item">Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery - Traversal methods
+      // 1. children()
+      // 2. each()
+      // 3. find()
+      // 4. first()
+      // 5. next()
+      // 6. parent()
+      // 7. prev()
+      // 8. siblings()
+
+      // each() => used to iterate each selected elements and also execute callback
+      // function for each element
+
+      $("document").ready(function () {
+        // $("li").each(function (index) {
+        //   console.log(`Index: ${index} => Text: ${$(this).text()}`);
+        // });
+        // $("#list")
+        //   .children()
+        //   .each(function (i) {
+        //     console.log(`Index: ${i} => Text: ${$(this).text()}`);
+        //   });
+        // find() => return all the matching child element from the parent
+        // $("#list")
+        //   .find(".list-item")
+        //   .each(function (index) {
+        //     console.log(`Index: ${index} => Text: ${$(this).text()}`);
+        //   });
+        // next() => get the immediate next sibling
+        // console.log($(".list-item").next().html());
+        // console.log($(".list-item").prev().html());
+        // parent()
+        // console.log($(".list-item").parent().html());
+        // siblings()
+        // console.log($(".list-item").siblings());
+        // $(".list-item")
+        //   .siblings()
+        //   .each(function (i) {
+        //     console.log(`Index => ${i} and ${$(this).text()}`);
+        //   });
+      });
+    </script>
+  </body>
+</html>

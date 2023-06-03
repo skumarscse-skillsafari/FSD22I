@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Handle-Height-width" />
+    <title>Handle-Height-width</title>
+  </head>
+  <body>
+    <h2>Handle-Height-width</h2>
+    <div id="box" style="height: 200px; width: 250px; background: green"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // height() and width()
+      $("document").ready(function () {
+        console.log($("#box").height());
+        console.log($("#box").width());
+
+        $("#box").height(100);
+        $("#box").width(100);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Handling Attributes" />
+    <title>jQuery - Handling Attributes</title>
+  </head>
+  <body>
+    <h2 style="font-size: 30px; font-family: 'Courier New', Courier, monospace">
+      jQuery - Handling Attributes
+    </h2>
+    <img
+      src="./images/image-three.jpg"
+      alt="image-three"
+      style="width: 200px; height: 200px"
+    />
+
+    <div id="result">
+      <h2>Heading Two</h2>
+      <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam,
+        reiciendis.
+      </p>
+    </div>
+
+    <input type="submit" value="Submit" id="btn" />
+
+    <!-- 
+        1. attr() => get or set the value(s) of specified attribute of the element
+        2. prop() => get or set the value of specified property of the element
+        3. html() => get or set html content to the specified element
+        4. text() => get or set text for the specified element
+        5. val() => get ot set value property of the specified element
+     -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery - Handling Attributes
+      // ready() => check all the html elements are loaded in webpage
+      $("document").ready(function () {
+        // attr()
+        // console.log($("img").attr("style"));
+        // $("img").attr("class", "image");
+        // $("img").attr("alt", "image-two");
+        // prop()
+        // let styleAttr = $("img").prop("style");
+        // console.log(styleAttr);
+        // console.log(styleAttr.width);
+        // console.log(styleAttr.height);
+        // $("img").prop(
+        //   "style",
+        //   "border: 5px solid red; height: 200px; width: 200px"
+        // );
+        // console.log($("h2").prop("style").fontFamily);
+        // html()
+        // console.log($("#result").html());
+        // $("#result").html("<h3>Heading Three</h3>");
+        // text()
+        // console.log($("#para").text());
+        // $("#para").text("This is new insert");
+        // val()
+
+        console.log($("#btn").val());
+        $("#btn").val("Search");
+      });
+    </script>
+  </body>
+</html>

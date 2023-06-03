@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Events" />
+    <title>jQuery - Events</title>
+    <style>
+      .container {
+        height: 200px;
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery - Events</h2>
+    <div class="container" id="demo"></div>
+    <p>
+      <button id="btn">Click</button>
+    </p>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery - Events
+      $("#btn").click(function (e) {
+        // console.log(e);
+        $("#demo").toggleClass("container");
+      });
+
+      $("#demo").mouseover(function () {
+        alert("Mouse hovered...");
+      });
+    </script>
+  </body>
+</html>
