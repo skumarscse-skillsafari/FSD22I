@@ -1,0 +1,15 @@
+h2 {
+  color: green;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+  color: red;
+}
+
+#para {
+  text-decoration: underline;
+}
