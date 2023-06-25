@@ -3,6 +3,8 @@ import "./App.css";
 import Products from "./Component/Products";
 import { userDetail, displayName } from "./Component/data";
 import Counter from "./Component/State/Counter";
+import CounterReducer from "./Component/ReducerHook/CounterReducer";
+import Users from "./Component/Effect/Users";
 
 function App() {
   // console.log(userDetail);
@@ -14,7 +16,9 @@ function App() {
       <p>User Age: {userDetail.age}</p>
       <p>User City: {userDetail.city}</p>
       <Products /> */}
-      <Counter />
+      {/* <Counter /> */}
+      {/* <CounterReducer /> */}
+      <Users />
     </div>
   );
 }
