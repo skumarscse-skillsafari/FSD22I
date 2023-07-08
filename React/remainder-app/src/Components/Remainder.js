@@ -7,6 +7,7 @@ import {
   getDocs,
   doc,
   deleteDoc,
+  runTransaction,
 } from "firebase/firestore";
 import { db } from "../Config/firebase-config";
 import EditRemainder from "./EditRemainder";
@@ -19,7 +20,10 @@ const Remainder = () => {
   useEffect(() => {
     const getRemainders = async () => {
       const remainderSnapshot = await getDocs(collection(db, "remainder"));
+      // console.log(remainderSnapshot);
       const remainderData = remainderSnapshot.docs.map((doc) => {
+        // console.log(doc.data());
+        // console.log(doc.id);
         return {
           ...doc.data(),
           id: doc.id,
@@ -28,7 +32,7 @@ const Remainder = () => {
       //   console.log(remainderData);
       setRemainders(remainderData);
       setChecked(remainderData);
-      console.log(remainders);
+      // console.log(remainders);
     };
 
     getRemainders();
@@ -56,6 +60,33 @@ const Remainder = () => {
         await deleteDoc(docRef);
         window.location.reload();
       }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleChecked = async (e, remainder) => {
+    setChecked((state) => {
+      const indexToUpdate = state.findIndex((r) => r.remainder === remainder);
+      // console.log(indexToUpdate);
+      const newState = [...state];
+      newState.splice(indexToUpdate, 1, {
+        ...state[indexToUpdate],
+        isChecked: !state[indexToUpdate].isChecked,
+      });
+      setRemainders(newState);
+      return newState;
+    });
+    const docRef = doc(db, "remainder", e.target.name);
+    try {
+      await runTransaction(db, async (transaction) => {
+        const updateDoc = await transaction.get(docRef);
+        // console.log(updateDoc.data());
+        if (!updateDoc.exists()) {
+          throw "Document doesn't exists";
+        }
+        transaction.update(docRef, { isChecked: !updateDoc.data().isChecked });
+      });
     } catch (error) {
       console.log(error);
     }
@@ -88,7 +119,7 @@ const Remainder = () => {
                               type="checkbox"
                               checked={isChecked}
                               name={id}
-                              //   onChange={handleChecked(e, remainder)}
+                              onChange={(e) => handleChecked(e, remainder)}
                             />
                           </span>
                         </div>
