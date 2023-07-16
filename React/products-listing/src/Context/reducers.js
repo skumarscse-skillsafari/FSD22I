@@ -11,7 +11,12 @@ export const cartReducer = (state, action) => {
         cart: state.cart.filter((c) => c.id !== action.payload.id),
       };
     case "CHANGE_CART_QTY":
-      break;
+      return {
+        ...state,
+        cart: state.cart.filter((c) =>
+          c.id === action.payload.id ? (c.qty = action.payload.qty) : c.qty
+        ),
+      };
 
     default:
       return state;
@@ -21,22 +26,41 @@ export const cartReducer = (state, action) => {
 export const productReducer = (state, action) => {
   switch (action.type) {
     case "SORT_BY_PRICE":
-      break;
+      return {
+        ...state,
+        sort: action.payload,
+      };
 
     case "FILTER_BY_STOCK":
-      break;
+      return {
+        ...state,
+        byStock: !state.byStock,
+      };
 
     case "FILTER_BY_DELIVERY":
-      break;
+      return {
+        ...state,
+        byQuickDelivery: !state.byQuickDelivery,
+      };
 
     case "FILTER_BY_RATING":
-      break;
+      return {
+        ...state,
+        byRating: action.payload,
+      };
 
     case "FILTER_BY_SEARCH":
-      break;
+      return {
+        ...state,
+        searchQuery: action.payload,
+      };
 
-    case "CLEAR_FILTER":
-      break;
+    case "CLEAR_FILTERS":
+      return {
+        byStock: false,
+        byQuickDelivery: false,
+        byRating: 0,
+      };
 
     default:
       return state;

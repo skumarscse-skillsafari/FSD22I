@@ -32,6 +32,12 @@ const Header = () => {
             type="search"
             placeholder="Search Product"
             className="m-auto"
+            onChange={(e) =>
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              })
+            }
           />
         </Navbar.Text>
         <Nav>

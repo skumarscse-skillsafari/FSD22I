@@ -1,3 +1,10 @@
+.header {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
 .cartItem {
   display: flex;
   justify-content: space-between;
@@ -24,15 +31,38 @@
   display: flex;
 }
 
+.title {
+  font-size: 30px;
+}
+
 .productContainer {
   display: flex;
-  width: 70%;
+  width: 78%;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.filters {
+  background-color: dimgrey;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 10px;
+  height: 86vh;
+}
+
+.filters > span {
+  padding-bottom: 20px;
+}
+
 .products {
   width: 30%;
   margin: 10px;
+}
+
+.summary {
+  width: 30%;
 }

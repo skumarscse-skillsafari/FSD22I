@@ -20,32 +20,32 @@ const SingleProduct = ({ prod }) => {
               <div>Standard Delivery</div>
             )}
             <Ratings rating={prod.ratings} />
-            {cart.some((p) => p.id === prod.id) ? (
-              <Button
-                variant="danger"
-                onClick={() =>
-                  dispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: prod,
-                  })
-                }
-              >
-                Remove from Cart
-              </Button>
-            ) : (
-              <Button
-                variant="primary"
-                onClick={() =>
-                  dispatch({
-                    type: "ADD_TO_CART",
-                    payload: prod,
-                  })
-                }
-              >
-                Add to Cart
-              </Button>
-            )}
           </Card.Subtitle>
+          {cart.some((p) => p.id === prod.id) ? (
+            <Button
+              variant="danger"
+              onClick={() =>
+                dispatch({
+                  type: "REMOVE_FROM_CART",
+                  payload: prod,
+                })
+              }
+            >
+              Remove from Cart
+            </Button>
+          ) : (
+            <Button
+              variant="primary"
+              onClick={() =>
+                dispatch({
+                  type: "ADD_TO_CART",
+                  payload: prod,
+                })
+              }
+            >
+              Add to Cart
+            </Button>
+          )}
         </Card.Body>
       </Card>
     </div>
