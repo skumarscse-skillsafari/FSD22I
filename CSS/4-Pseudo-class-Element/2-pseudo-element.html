@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="CSS - Pseudo-Element">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Pseudo-Element" />
     <title>CSS - Pseudo - Element</title>
     <style>
-        /* 
+      /* 
         Pseudo - Element => add false element into the html page
         // All the pseudoElements inline (default)
         1. before
@@ -19,34 +18,33 @@
             properties
         }
         */
-        h1::before {
-            display: block;
-            height: 10px;
-            background-color: coral;
-            content: "";
-        }
+      h1::before {
+        display: block;
+        height: 10px;
+        background-color: coral;
+        content: "";
+      }
 
-        h1 {
-            color: crimson;
-            text-align: center;
-        }
+      h1 {
+        color: crimson;
+        text-align: center;
+      }
 
-        p::first-letter {
-            font-size: 42px;
-        }
+      p::first-letter {
+        font-size: 42px;
+      }
 
-        h1::after {
-            display: block;
-            background-color: coral;
-            content: "";
-            height: 10px;
-        }
+      h1::after {
+        display: block;
+        background-color: coral;
+        content: "";
+        height: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>CSS - Pseudo Element</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quo.</p>
-</body>
-
+  </body>
 </html>
