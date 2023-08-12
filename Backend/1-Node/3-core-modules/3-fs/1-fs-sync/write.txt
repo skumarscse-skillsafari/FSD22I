@@ -1,0 +1,5 @@
+The written content are: This is from the text file => "first.txt", This is from the text file => "second.txt"
+The written content are: This is from the text file => "first.txt", This is from the text file => "second.txt"
+The written content are: This is from the text file => "first.txt", This is from the text file => "second.txt"
+The written content are: This is from the text file => "first.txt", This is from the text file => "second.txt"
+The written content are: This is from the text file => "first.txt", This is from the text file => "second.txt"
