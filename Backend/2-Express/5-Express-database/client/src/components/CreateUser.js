@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Alert from "react-bootstrap/Alert";
+// import Alert from "react-bootstrap/Alert";
 
 const CreateUser = () => {
   const navigate = useNavigate();
@@ -31,7 +31,10 @@ const CreateUser = () => {
     e.preventDefault();
     console.log(user);
     axios
-      .post("http://localhost:5000/api/v1/create", user)
+      .post(
+        "https://sparkling-sheath-dress-bear.cyclic.cloud/api/v1/create",
+        user
+      )
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
     setUser({

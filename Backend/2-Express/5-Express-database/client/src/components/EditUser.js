@@ -19,7 +19,7 @@ const EditUser = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/user/${id}`)
+      .get(`https://sparkling-sheath-dress-bear.cyclic.cloud/api/v1/user/${id}`)
       .then((res) => setUser(res.data.usersData))
       .catch((err) => console.log(err));
   }, [id]);
@@ -39,7 +39,10 @@ const EditUser = () => {
     e.preventDefault();
     console.log(user);
     axios
-      .put(`http://localhost:5000/api/v1/user/edit/${id}`, user)
+      .put(
+        `https://sparkling-sheath-dress-bear.cyclic.cloud/api/v1/user/edit/${id}`,
+        user
+      )
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
     setUser({

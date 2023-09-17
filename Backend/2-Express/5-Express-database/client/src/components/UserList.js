@@ -7,7 +7,7 @@ const UserList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/user")
+      .get("https://sparkling-sheath-dress-bear.cyclic.cloud/api/v1/user")
       .then((res) => setUsers(res.data.usersData))
       .catch((err) => console.log(err));
   }, []);
@@ -15,7 +15,9 @@ const UserList = () => {
   const deleteUser = (id) => {
     if (window.confirm("Are you sure to delete the user?")) {
       axios
-        .delete(`http://localhost:5000/api/v1/user/delete/${id}`)
+        .delete(
+          `https://sparkling-sheath-dress-bear.cyclic.cloud/api/v1/user/delete/${id}`
+        )
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
       window.location.reload();
